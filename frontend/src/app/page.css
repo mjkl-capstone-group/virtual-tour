@@ -1,0 +1,78 @@
+:root {
+  --primary-color: #1a446c;
+  --secondary-color: #3db4c0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background: white !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section {
+  height: 90vh;
+  background: linear-gradient(rgba(26, 68, 108, 0.7), rgba(61, 180, 192, 0.3)),
+    url('https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272') center/cover;
+  display: flex;
+  align-items: center;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: var(--secondary-color);
+}
+
+.destination-card {
+  transition: transform 0.3s;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+}
+
+.nav-pills .nav-link {
+  color: black !important;
+}
+
+.nav-pills .nav-link.active {
+  background-color: black !important;
+  color: white !important;
+}
+
+.nav-pills .nav-link:hover {
+  border: 1px solid black !important;
+}
+
+
+.leyte-bg-pattern {
+  background-image: radial-gradient(var(--secondary-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--secondary-color);
+}
+
+.categories-title {
+  position: relative;
+  display: inline-block;
+}
+
