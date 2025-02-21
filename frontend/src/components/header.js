@@ -5,8 +5,6 @@ import "./component.css"
 
 import { useRouter } from "next/navigation";
 
-//This component is for the main page of the website
-
 const Header = () => {
     const router = useRouter();
 
@@ -14,18 +12,33 @@ const Header = () => {
         router.push('/pages/destinations/');
     };
 
+    const navigatetoAbout = () => {
+        router.push('/pages/about/');
+    };
+
     const navigateToHome = () => {
         router.push('/');
     };
 
-    const navigateToAbout = () => {
-        router.push('/pages/about/');
+    const navigateToForums = () => {
+        router.push('/pages/community/forums/');
+    };
+
+    const navigateToHelpFaq = () => {
+        router.push('/pages/community/help-faq/');
+    };
+
+    const navigateToReviews = () => {
+        router.push('/pages/community/reviews/');
     };
 
     return (
         <nav className="navbar navbar-expand-md sticky-top py-3">
             <div className="container">
-                <a className="navbar-brand fw-bold" href="#" style={{ color: 'var(--primary-color)' }}>
+                <a className="navbar-brand fw-bold"
+                    href="#"
+                    style={{ color: 'var(--primary-color)' }}
+                >
                     <i className="fas fa-water me-2"></i><span style={{ color: 'black' }}>LEYTEXPLORE</span>
                 </a>
                 <button
@@ -39,39 +52,61 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <a className="nav-link" onClick={navigateToHome} style={{ color: 'black', cursor: 'pointer' }}>
+                            <a className="nav-link"
+                                onClick={navigateToHome}
+                                style={{ color: 'black', cursor: 'pointer' }}
+                            >
                                 Home
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" onClick={navigateToDestinations} style={{ color: 'black', cursor: 'pointer' }}>
+                            <a className="nav-link"
+                                onClick={navigateToDestinations}
+                                style={{ color: 'black', cursor: 'pointer' }}
+                            >
                                 Destinations
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link"  style={{ color: 'black' }}>
+                            <a className="nav-link"
+                                onClick={navigatetoAbout}
+                                style={{ color: 'black', cursor: 'pointer' }}
+                            >
                                 About
                             </a>
                         </li>
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" id="communityDropdown" role="button" data-bs-toggle="dropdown" style={{ color: 'black' }}>
+                            <a className="nav-link dropdown-toggle"
+                                id="communityDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                style={{ color: 'black' }}>
                                 Community
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="communityDropdown">
                                 <li>
-                                    <a className="dropdown-item">
+                                    <a className="dropdown-item"
+                                    onClick={navigateToReviews}
+                                    style={{ cursor: 'pointer' }}
+                                    >
                                         <i className="fi fi-ss-review me-2"></i>
                                         Reviews
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="dropdown-item">
+                                    <a className="dropdown-item"
+                                    onClick={navigateToForums}
+                                    style={{ cursor: 'pointer' }}
+                                    >
                                         <i className="fi fi-sr-meeting me-2"></i>
                                         Forums
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="dropdown-item ">
+                                    <a className="dropdown-item "
+                                    onClick={navigateToHelpFaq}
+                                    style={{ cursor: 'pointer' }}
+                                    >
                                         <i className="fi fi-ss-comments-question me-2"></i>
                                         Help/FAQ
                                     </a>
