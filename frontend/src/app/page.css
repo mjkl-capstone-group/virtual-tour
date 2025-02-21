@@ -7,11 +7,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.navbar {
-  background: white !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
 .hero-section {
   height: 90vh;
   background: linear-gradient(rgba(26, 68, 108, 0.7), rgba(61, 180, 192, 0.3)),

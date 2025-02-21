@@ -1,6 +1,11 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
+export const metadata = {
+    title: "Destinations",
+    description: "Explore amazing destinations",
+};
+
 const TestPage = () => {
     return (
         <>

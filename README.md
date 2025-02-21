@@ -8,7 +8,7 @@ An interactive 360° virtual tour of Southern Leyte, built with Next.js and Pann
 - [✨ Features](#-features)
 - [🛠️ Installation](#-installation)
 - [📖 Usage](#-usage)
-- [🛠 Tech Stack](#-tech-stack)
+- [🛠️ Tech Stack](#-tech-stack)
 
 ## 🌍 Live Demo
 🔗 [Coming Soon]
