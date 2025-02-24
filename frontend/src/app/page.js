@@ -11,15 +11,19 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 export default function Home() {
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap.min.js");
+  }, []);
+
   const router = useRouter();
 
   const navigateToSogodBay = () => {
     router.push('/vr-screens/sogod-bay/');
   };
 
-  useEffect(() => {
-    import("bootstrap/dist/js/bootstrap.min.js");
-  }, []);
+  const navigateToTest = () => {
+    router.push('/test-page/');
+  };
 
   useEffect(() => {
     AOS.init({
@@ -41,28 +45,31 @@ export default function Home() {
         data-aos="fade-up"
       >
         <div className="container text-white text-center">
-          <h1 className="display-5 mb-3">Explore Southern Leyte's Hidden Paradise</h1>
+          <h1 className="display-5 mb-3 strong"><strong>Explore Southern Leyte's Hidden Paradise</strong></h1>
           <p className="lead-6 mb-4">
             Virtual tours of pristine beaches, majestic islands, and rich marine life
           </p>
-          <a href="#tours" className="btn btn-primary btn-lg px-5">
+          <a onClick={navigateToTest}
+            className="btn btn-primary btn-lg px-5"
+            style={{ cursor: 'pointer' }}
+          >
             Start Exploring
           </a>
         </div>
-      </section>
+      </section >
 
       {/* Featured Destinations 
       Future updates in this section will include a carousel for the featured destinations section and 
       the selected destination will base on the user's choice or user's rating. There should only be 3-5
       featured destinations in the carousel for each category.
       */}
-      <section className="py-5 leyte-bg-pattern" id="destinations">
+      < section className="py-5" id="destinations" >
         <div className="container py-5">
           <h2 className="section-title text-center mb-5" data-aos="fade-up">
             <strong>Featured Destinations</strong>
           </h2>
 
-          <section className="leyte-bg-pattern" id="destinations">
+          <section id="destinations">
             <div className="container py-5">
 
               {/* Navigation Tabs */}
@@ -157,7 +164,7 @@ export default function Home() {
                   <section className="py-5">
                     <div className="container py-5">
                       <div className="row g-4">
-                        <h1>Historical here lods</h1>
+                        <h1>Historical sites here lods</h1>
                       </div>
                     </div>
                   </section>
@@ -189,10 +196,10 @@ export default function Home() {
           </section>
 
         </div>
-      </section>
+      </section >
 
       {/* Why Choose Us Section */}
-      <section className="py-5 bg-light" id="about">
+      < section className="py-5 bg-light" id="about" >
         <div className="container py-5">
           <h2 className="section-title text-center mb-5" data-aos="fade-up">
             <strong> Why Choose Us </strong>
@@ -221,10 +228,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Footer Section */}
-      <Footer />
+      <div data-aos="fade-up" data-aos-delay='100'>
+        < Footer />
+      </div>
     </>
   );
 }

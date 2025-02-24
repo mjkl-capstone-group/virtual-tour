@@ -1,5 +1,10 @@
 @import "@flaticon/flaticon-uicons/css/all/all";
 
+:root {
+    --primary-color: #1a446c;
+    --secondary-color: #3db4c0;
+}
+
 #panorama {
     width: 500px;
     height: 100vh;
