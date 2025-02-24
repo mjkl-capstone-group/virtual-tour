@@ -1,57 +1,40 @@
-import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Team from "./ourteam";
+
+export const metadata = {
+    title: "About Us",
+    description: "We are a team of Information Technology students passionate about blending research and development to create innovative and impactful solutions.",
+};
 
 export default function AboutUs() {
     return (
         <>
             <Header />
             <div className="bg-light">
-                <Head>
-                    <title>About Us</title>
-                    <meta name="description" content="Learn more about our capstone team and mission." />
-                </Head>
 
                 {/* Hero Section */}
-                <section className="bg-primary text-white text-center py-5">
-                    <div className="container">
+                <section className="text-white text-center py-5 custom-hero">
+                    <div className="container"
+                        style={{ maxHeight: '440px' }}
+                    >
                         <h1 className="display-4 fw-bold">About Us</h1>
                         <p className="lead">
-                            We are a dedicated team of four students working on our capstone project, blending research and development to create something impactful.
+                            We are a team of Information Technology students passionate about blending research and
+                            development to create innovative and impactful solutions. Through our capstone project,
+                            we aim to leverage technology to enhance exploration and learning. Our mission is to create a
+                            user-friendly platform that fosters engagement and accessibility, contributing to the ever-evolving digital landscape.
                         </p>
                     </div>
                 </section>
 
                 {/* Our Team */}
                 <section className="container py-5">
-                    <h2 className="text-center fw-bold">Meet Our Team</h2>
-                    <div className="row mt-4">
-                        {/* Developer */}
-                        <div className="col-md-3">
-                            <div className="card shadow">
-                                <div className="card-body text-center">
-                                    <h5 className="card-title">[Your Name]</h5>
-                                    <p className="card-text text-muted">Lead Developer</p>
-                                    <p>Responsible for coding, UI, and backend development of the project.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Other Team Members */}
-                        {["Member 1", "Member 2", "Member 3"].map((member, index) => (
-                            <div key={index} className="col-md-3">
-                                <div className="card shadow">
-                                    <div className="card-body text-center">
-                                        <h5 className="card-title">{member}</h5>
-                                        <p className="card-text text-muted">Research & Documentation</p>
-                                        <p>Focused on research, writing, and ensuring project accuracy.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    <h2 className="fw-bold text-center">Meet Our Team</h2>
+                    <p className="text-center">The proponents</p>
+                    <Team />
                 </section>
 
                 {/* Our Mission */}
@@ -107,7 +90,10 @@ export default function AboutUs() {
                     </div>
                 </section>
             </div>
-            <Footer />
+            <div data-aos="fade-up" data-aos-delay='100'>
+                <Footer />
+            </div>
         </>
     );
 }
+

@@ -2,44 +2,34 @@
 
 import React from "react";
 import "./component.css"
+import Image from "next/image";
 
 import { useRouter } from "next/navigation";
 
 const Header = () => {
     const router = useRouter();
 
-    const navigateToDestinations = () => {
-        router.push('/pages/destinations/');
-    };
-
-    const navigatetoAbout = () => {
-        router.push('/pages/about/');
-    };
-
-    const navigateToHome = () => {
-        router.push('/');
-    };
-
-    const navigateToForums = () => {
-        router.push('/pages/community/forums/');
-    };
-
-    const navigateToHelpFaq = () => {
-        router.push('/pages/community/help-faq/');
-    };
-
-    const navigateToReviews = () => {
-        router.push('/pages/community/reviews/');
+    const navigateTo = (path) => {
+        router.push(path);
     };
 
     return (
         <nav className="navbar navbar-expand-md sticky-top py-3">
             <div className="container">
                 <a className="navbar-brand fw-bold"
-                    href="#"
+                    onClick={() => navigateTo('/')}
                     style={{ color: 'var(--primary-color)' }}
                 >
-                    <i className="fas fa-water me-2"></i><span style={{ color: 'black' }}>LEYTEXPLORE</span>
+                    <div className="flex items-center">
+                        <Image 
+                        src="/assets/logos/leytexplore.jpg" 
+                        className="mb-1"
+                        width={30} 
+                        height={30} 
+                        alt="Leyte Explore" 
+                        />
+                        <span className="ms-2 text-black">LEYTEXPLORE</span>
+                    </div>
                 </a>
                 <button
                     className="navbar-toggler"
@@ -53,7 +43,7 @@ const Header = () => {
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
                             <a className="nav-link"
-                                onClick={navigateToHome}
+                                onClick={() => navigateTo('/')}
                                 style={{ color: 'black', cursor: 'pointer' }}
                             >
                                 Home
@@ -61,7 +51,7 @@ const Header = () => {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link"
-                                onClick={navigateToDestinations}
+                                onClick={() => navigateTo('/pages/destinations')}
                                 style={{ color: 'black', cursor: 'pointer' }}
                             >
                                 Destinations
@@ -69,7 +59,7 @@ const Header = () => {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link"
-                                onClick={navigatetoAbout}
+                                onClick={() => navigateTo('/pages/about')}
                                 style={{ color: 'black', cursor: 'pointer' }}
                             >
                                 About
@@ -86,8 +76,8 @@ const Header = () => {
                             <ul className="dropdown-menu" aria-labelledby="communityDropdown">
                                 <li>
                                     <a className="dropdown-item"
-                                    onClick={navigateToReviews}
-                                    style={{ cursor: 'pointer' }}
+                                        onClick={() => navigateTo('/pages/community/reviews')}
+                                        style={{ cursor: 'pointer' }}
                                     >
                                         <i className="fi fi-ss-review me-2"></i>
                                         Reviews
@@ -95,8 +85,8 @@ const Header = () => {
                                 </li>
                                 <li>
                                     <a className="dropdown-item"
-                                    onClick={navigateToForums}
-                                    style={{ cursor: 'pointer' }}
+                                        onClick={() => navigateTo('/pages/community/forums')}
+                                        style={{ cursor: 'pointer' }}
                                     >
                                         <i className="fi fi-sr-meeting me-2"></i>
                                         Forums
@@ -104,8 +94,8 @@ const Header = () => {
                                 </li>
                                 <li>
                                     <a className="dropdown-item "
-                                    onClick={navigateToHelpFaq}
-                                    style={{ cursor: 'pointer' }}
+                                        onClick={() => navigateTo('/pages/community/help-faq')}
+                                        style={{ cursor: 'pointer' }}
                                     >
                                         <i className="fi fi-ss-comments-question me-2"></i>
                                         Help/FAQ

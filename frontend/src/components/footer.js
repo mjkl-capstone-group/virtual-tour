@@ -1,11 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-//This component is for the main page of the website
-
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white py-5" style={{ minHeight: '300px' }} data-aos="fade-up" data-aos-delay='100'>
+        <footer className="bg-dark text-white py-5" style={{ minHeight: '300px' }}>
             <div className="container">
                 <div className="row g-4">
                     {/* Project Info */}
