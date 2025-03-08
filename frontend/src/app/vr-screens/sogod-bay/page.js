@@ -1,9 +1,16 @@
-import PannellumViewer from "@/components/vr-components/sogod-bay/pannellumViewer"; 
+import PannellumViewer from "@/components/pannellumViewer";
+import assetsURL from "@/utils/supabaseAssets";
+
+export const metadata = {
+    title: "Sogod Bay VR",
+    description: "Explore the beauty of Sogod Bay in Southern Leyte through this virtual tour.",
+};
 
 export default async function SogodBayVR() {
+
     const initialScenes = {
         scene1: {
-            panorama: "/assets/panoramas/pureshotsala.jpg",
+            panorama: `${assetsURL.panoramas}pureshotsala.jpg`,
             nextScene: "scene2",
             hotspotYaw: 188,
             hotspotPitch: -20,
@@ -12,7 +19,7 @@ export default async function SogodBayVR() {
             initialPitch: -15,
         },
         scene2: {
-            panorama: "/assets/panoramas/nextkitchen.jpg",
+            panorama: `${assetsURL.panoramas}nextkitchen.jpg`,
             nextScene: "scene1",
             hotspotYaw: -10,
             hotspotPitch: -20,

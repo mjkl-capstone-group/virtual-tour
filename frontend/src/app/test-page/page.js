@@ -1,60 +1,49 @@
-import React from "react";
-import Image from "next/image";
-import './page.css';
+"use client";
 
-const teamMembers = [
+import { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import "./page.css";
+
+const slides = [
     {
-        name: "Alice Johnson",
-        role: "Project Manager",
-        image: "/images/alice.jpg",
-        description: "Alice is responsible for overseeing project development and team coordination.",
+        image: "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272",
+        title: "Discover Southern Leyte",
+        caption: "Embark on a journey through breathtaking landscapes and rich history."
     },
     {
-        name: "Bob Smith",
-        role: "Lead Developer",
-        image: "/images/bob.jpg",
-        description: "Bob specializes in backend development and system architecture.",
+        image: "https://images.unsplash.com/photo-1511512578047-dfb367046420",
+        title: "Adventure Awaits",
+        caption: "From scenic spots to thrilling experiences, explore the best of Southern Leyte."
     },
     {
-        name: "Charlie Brown",
-        role: "UI/UX Designer",
-        image: "/images/charlie.jpg",
-        description: "Charlie ensures our product is user-friendly and visually appealing.",
-    },
-    {
-        name: "Diana Prince",
-        role: "AI Engineer",
-        image: "/images/diana.jpg",
-        description: "Diana works on integrating AI models and enhancing platform intelligence.",
-    },
+        image: "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb",
+        title: "A Hidden Gem",
+        caption: "Uncover pristine beaches, lush mountains, and diverse marine life in this tropical paradise."
+    }
 ];
 
-const AboutUs = () => {
-    return (
-        <div className="container py-5">
-            <h2 className="text-center mb-5">Meet Our Team</h2>
-            <div className="position-relative">
-                <div className="timeline-line"></div>
-                {teamMembers.map((member, index) => (
-                    <div key={index} className={`row align-items-center mb-5 ${index % 2 === 0 ? "flex-row-reverse" : ""}`}>
-                        <div className="col-md-5">
-                            <div className="card p-3 shadow">
-                                <h4>{member.name}</h4>
-                                <h6 className="text-muted">{member.role}</h6>
-                                <p>{member.description}</p>
-                            </div>
-                        </div>
-                        <div className="col-md-2 text-center position-relative">
-                            <div className="timeline-dot"></div>
-                        </div>
-                        <div className="col-md-5 text-center">
-                            <Image src={member.image} alt={member.name} width={150} height={150} className="rounded-circle" />
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-};
+function ControlledCarousel() {
+    const [index, setIndex] = useState(0);
 
-export default AboutUs;
+    const handleSelect = (selectedIndex) => {
+        setIndex(selectedIndex);
+    };
+
+    return (
+        <>
+            <Carousel activeIndex={index} onSelect={handleSelect} interval={3000}>
+                {slides.map((slide, idx) => (
+                    <Carousel.Item key={idx}>
+                        <img className="carousel-image" src={slide.image} alt={slide.title} />
+                        <Carousel.Caption className="mb-3">
+                            <h3>{slide.title}</h3>
+                            <p>{slide.caption}</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                ))}
+            </Carousel>
+        </>
+    );
+}
+
+export default ControlledCarousel;

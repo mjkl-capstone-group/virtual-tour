@@ -2,7 +2,7 @@
     position: relative;
 }
 
-.custom-hero{
+.custom-hero {
     background-color: var(--secondary-color);
 }
 
@@ -19,11 +19,12 @@
 .timeline-dot {
     width: 10px;
     height: 10px;
-    background:  black;
+    background: black;
     border-radius: 50%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 5;
 }
 
 .card {
@@ -33,7 +34,8 @@
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
 }
 
 .member-image {
@@ -44,4 +46,3 @@
 .custom-role {
     font-size: 12px;
 }
-

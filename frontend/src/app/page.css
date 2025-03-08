@@ -2,14 +2,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.hero-section {
-  height: 90vh;
-  background: linear-gradient(rgba(26, 68, 108, 0.7), rgba(61, 180, 192, 0.3)),
-    url('https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272') center/cover;
-  display: flex;
-  align-items: center;
-}
-
 .feature-icon {
   font-size: 3rem;
   color: var(--secondary-color);
@@ -59,6 +51,11 @@ body {
   width: 60px;
   height: 3px;
   background: var(--secondary-color);
+}
+
+.section-title-center {
+  display: block;
+  text-align: center;
 }
 
 .categories-title {

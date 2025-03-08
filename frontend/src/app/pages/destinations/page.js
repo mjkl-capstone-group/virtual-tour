@@ -1,24 +1,18 @@
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import VirtualTour from "./destination";
 
 export const metadata = {
     title: "Destinations",
-    description: "Explore amazing destinations",
+    description: "Experience immersive 360° virtual tours of top destinations.",
+    openGraph: {
+        title: "Destinations",
+        description: "Discover and explore stunning destinations with immersive virtual tours.",
+    },
 };
 
-const TestPage = () => {
+export default function HomePage() {
     return (
-        <>
-            <Header />
-            <h1
-                className="text-center"
-                style={{ height: '90vh' }}
-            >
-                Hello, World!
-            </h1>
-            <Footer />
-        </>
+        <div>
+            <VirtualTour />
+        </div>
     );
-};
-
-export default TestPage;
+}

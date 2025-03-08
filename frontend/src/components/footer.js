@@ -1,7 +1,19 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
+import assetsURL from '@/utils/supabaseAssets';
+
+import { useRouter } from 'next/navigation';
 
 const Footer = () => {
+
+    const router = useRouter();
+
+    const navigateTo = (path) => {
+        router.push(path);
+    };
+
     return (
         <footer className="bg-dark text-white py-5" style={{ minHeight: '300px' }}>
             <div className="container">
@@ -57,7 +69,9 @@ const Footer = () => {
                     <div className="col-md-3">
                         <h4 style={{ fontSize: '1.2rem' }}>Quick Links</h4>
                         <ul className="list-unstyled" style={{ fontSize: '0.9rem' }}>
-                            <li><a href="/about" className="text-white">About Us</a></li>
+                            <li>
+                                <a className="text-white" onClick={() => navigateTo('/pages/about')} style={{ cursor: 'pointer' }}>About Us</a>
+                            </li>
                             <li><a href="/faq" className="text-white">FAQ</a></li>
                             <li><a href="/privacy-policy" className="text-white">Privacy Policy</a></li>
                             <li><a href="/terms" className="text-white">Terms of Service</a></li>
@@ -69,18 +83,32 @@ const Footer = () => {
                     {/* Acknowledgment and Logos */}
                     <div className="col-md-6 d-flex gap-3">
                         <Image
-                            src="/assets/logos/leyte_normal_university.png"
+                            src={`${assetsURL.logos}leyte_normal_university.png`}
                             alt="Leyte Normal University"
                             width={50}
                             height={50}
                             title='Leyte Normal University'
                         />
                         <Image
-                            src="/assets/logos/department_of_tourism.png"
+                            src={`${assetsURL.logos}department_of_tourism.png`}
                             alt="Department of Tourism"
                             width={50}
                             height={50}
                             title='Department of Tourism'
+                        />
+                        <Image
+                            src={`${assetsURL.logos}group_logo.png`}
+                            alt="I Love Philippines"
+                            width={50}
+                            height={50}
+                            title='I Love Philippines'
+                        />
+                        <Image
+                            src={`${assetsURL.logos}i_love_philippines.png`}
+                            alt="I Love Philippines"
+                            width={100}
+                            height={50}
+                            title='I Love Philippines'
                         />
                     </div>
 
