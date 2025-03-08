@@ -6,9 +6,9 @@ An interactive 360° virtual tour of Southern Leyte, built with Next.js and Pann
 - [🌍 Live Demo](#-live-demo)
 - [📜 About the Project](#-about-the-project)
 - [✨ Features](#-features)
-- [🛠️ Installation](#-installation)
+- [📦 Installation](#-installation)
 - [📖 Usage](#-usage)
-- [🛠️ Tech Stack](#-tech-stack)
+- [💻 Tech Stack](#-tech-stack)
 
 ## 🌍 Live Demo
 🔗 [Coming Soon]
@@ -23,16 +23,14 @@ LeyteXplore is a virtual tour platform that allows users to navigate through pan
 - ✅ AI-Powered Chatbot for virtual assistance
 - ✅ Smooth User Experience with Next.js
 
-## 🛠️ Installation
-Prerequisites
-- Node.js (Latest LTS)
-- Git
+## 📦 Installation
 - Node version: v22.13.1
 - Npm version: 10.9.2
+- Git
 
 ## Setup
 1️⃣ Clone the repository:
-- git clone https://github.com/mjkl-capstone-group/new.js-virtual-tour.git  
+- git clone https://github.com/mjkl-capstone-group/virtual-tour.git 
 - cd new.js-virtual-tour 
 
 2️⃣ Install dependencies:
@@ -49,13 +47,10 @@ Click on locations in the map to open a 360° view.
 Use the zoom-in/out feature to explore landmarks.
 Ask the AI chatbot for travel recommendations.
 
-## 🛠️ Tech Stack
+## 💻 Tech Stack
 Frontend: 
-- Next.js,
+- Next.js
 - Boostrap 
-360° Viewer:
 - Pannellum
-AI Chatbot:
-- OpenAI API
 
 
