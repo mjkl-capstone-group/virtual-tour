@@ -2,7 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 export const metadata = {
-    title: "Forums",
+    title: "Forums | PERIPLOS",
     description: "Join the community and engage in discussions with fellow travelers.",
 }
 

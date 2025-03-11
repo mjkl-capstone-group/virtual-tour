@@ -5,8 +5,7 @@ import AOS from "aos";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import "./page.css";
 
 export default function DestinationComponent() {
     const router = useRouter();
@@ -29,11 +28,9 @@ export default function DestinationComponent() {
 
     return (
         <>
-            <Header />
-
             <section className="py-5" id="destinations">
                 <div className="container">
-                    <h2 className="section-title text-center mb-5" data-aos="fade-up">
+                    <h2 className="destination-title text-center mb-5" data-aos="fade-up">
                         <strong>Destinations</strong>
                     </h2>
 
@@ -165,7 +162,6 @@ export default function DestinationComponent() {
                 </div>
             </section>
 
-            <Footer />
         </>
     );
 }

@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 import Team from "./ourteam";
 
 export const metadata = {
-    title: "About Us",
+    title: "About Us | PERIPLOS",
     description: "We are a team of Information Technology students passionate about blending research and development to create innovative and impactful solutions.",
 };
 

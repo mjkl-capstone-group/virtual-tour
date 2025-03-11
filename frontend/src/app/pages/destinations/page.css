@@ -10,3 +10,20 @@
 .nav-pills .nav-link:hover {
     border: 1px solid black !important;
 }
+
+.destination-title {
+    position: relative;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.destination-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-color);
+}

@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const metadata = {
-  title: "LEYTEXPLORE | Home",
+  title: "Home | PERIPLOS",
   description: "Tourism in Southern Leyte",
   icons: {
     icon: "/assets/favicon.ico"
