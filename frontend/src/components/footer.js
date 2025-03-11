@@ -98,10 +98,10 @@ const Footer = () => {
                         />
                         <Image
                             src={`${assetsURL.logos}group_logo.png`}
-                            alt="I Love Philippines"
+                            alt="Capstone Group Logo"
                             width={50}
                             height={50}
-                            title='I Love Philippines'
+                            title='Capstone Group Logo'
                         />
                         <Image
                             src={`${assetsURL.logos}i_love_philippines.png`}

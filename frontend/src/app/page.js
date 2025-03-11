@@ -63,12 +63,13 @@ export default function Home() {
 
             <div className="col-lg-6 text-center">
               <img
-                src="https://placehold.co/600x400"
-                alt="Virtual Tour Screenshot"
+                src="/assets/photos/virtualtour.gif"
+                alt="Virtual Tour Tutorial"
                 className="img-fluid rounded shadow"
                 style={{ maxWidth: "100%", height: "auto" }}
               />
             </div>
+
           </div>
         </div>
       </section>
@@ -143,7 +144,7 @@ export default function Home() {
                           <div className="p-3 bg-white">
                             <h4>Tangkaan Beach</h4>
                             <p>White sand beach with stunning sunset views</p>
-                            <button className="btn" style={{ color: 'white', background: 'black' }} onClick={() => navigateToSample()}>Virtual Tour</button>
+                            <button className="btn" style={{ color: 'white', background: 'black' }} onClick={() => navigateTo('/vr-screens/tangkaan-beach/')}>Virtual Tour</button>
                           </div>
                         </div>
                       </div>
@@ -303,7 +304,7 @@ export default function Home() {
       </section>
 
       {/* Footer Section */}
-      <div data-aos="fade-up" data-aos-delay='100'>
+      <div data-aos="fade-up" data-aos-delay='10'>
         < Footer />
       </div>
     </>

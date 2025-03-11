@@ -2,7 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 export const metadata = {
-    title: "Reviews",
+    title: "Reviews | PERIPLOS",
     description: "Read reviews from other travelers and share your own experiences.",
 };
 

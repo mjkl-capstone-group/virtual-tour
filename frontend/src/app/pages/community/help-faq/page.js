@@ -2,7 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 export const metadata = {
-    title: "Help & FAQ",
+    title: "Help & FAQ | PERIPLOS",
     description: "Get answers to frequently asked questions and learn how to use our platform.",
 }; 
 

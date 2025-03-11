@@ -18,7 +18,7 @@ const Header = () => {
     };
 
     return (
-        <nav className="navbar navbar-expand-md sticky-top py-3">
+        <nav className="navbar navbar-expand-md sticky-top py-2">
             <div className="container">
                 {/* Logo */}
                 <a className="navbar-brand fw-bold"
@@ -33,7 +33,7 @@ const Header = () => {
                             height={30}
                             alt="Leyte Explore"
                         />
-                        <span className="ms-2 text-black">LEYTEXPLORE</span>
+                        <span className="ms-2 text-black">PERIPLOS</span>
                     </div>
                 </a>
 
@@ -49,7 +49,7 @@ const Header = () => {
 
                 {/* Navigation Links */}
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ms-auto">
+                    <ul className="navbar-nav mb-2">
                         <li className="nav-item mt-1">
                             <a className="nav-link"
                                 onClick={() => navigateTo('/')}
@@ -71,100 +71,81 @@ const Header = () => {
                                 id="communityDropdown"
                                 role="button"
                                 data-bs-toggle="dropdown"
-                                style={{ color: 'black' }}>
+                                style={{ color: 'black' }}
+                            >
                                 Community
                             </a>
                             <ul className="dropdown-menu mb-2" aria-labelledby="communityDropdown">
                                 <li>
                                     <a className="dropdown-item"
                                         onClick={() => navigateTo('/pages/community/reviews')}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        <i className="fi fi-ss-review me-2"></i>
-                                        Reviews
+                                        style={{ cursor: 'pointer' }}>
+                                        <i className="fi fi-ss-review me-2"></i> Reviews
                                     </a>
                                 </li>
                                 <li>
                                     <a className="dropdown-item"
                                         onClick={() => navigateTo('/pages/community/forums')}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        <i className="fi fi-sr-meeting me-2"></i>
-                                        Forums
+                                        style={{ cursor: 'pointer' }}>
+                                        <i className="fi fi-sr-meeting me-2"></i> Forums
                                     </a>
                                 </li>
                                 <li>
                                     <a className="dropdown-item"
                                         onClick={() => navigateTo('/pages/community/help-faq')}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        <i className="fi fi-ss-comments-question me-2"></i>
-                                        Help/FAQ
+                                        style={{ cursor: 'pointer' }}>
+                                        <i className="fi fi-ss-comments-question me-2"></i> Help/FAQ
                                     </a>
                                 </li>
                             </ul>
                         </li>
+                    </ul>
 
-                        {/* Discover Button */}
-                        <li className="nav-item mt-1 mx-2">
-                            <a className="btn nav-link"
-                                style={{ backgroundColor: 'black', color: 'white' }}
-                                onClick={() => navigateTo('/test-page/offcanvas')}
-                            >
-
-                                Discover
+                    <ul className="navbar-nav ms-auto">
+                        {/* Discover Icon */}
+                        <li className="nav-item mt-1">
+                            <a className="nav-link" onClick={() => navigateTo('/test-page/offcanvas')} style={{ cursor: 'pointer' }} title="Discover">
+                                <i className="fa-regular fa-compass fa-lg"></i>
                             </a>
                         </li>
 
-                        {/* User Profile Section */}
-                        <li className="nav-item dropdown ms-3">
-                            <a className="nav-link d-flex align-items-center"
-                                id="userDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <Image
-                                    src="/assets/groupmates/romawak.jpg"
-                                    width={35}
-                                    height={35}
-                                    className="rounded-circle user-profile"
-                                    alt="User Profile"
-                                />
+                        {/* Question Icon */}
+                        <li className="nav-item mt-1">
+                            <a className="nav-link" onClick={() => navigateTo('/questions')} style={{ cursor: 'pointer' }} title="Help/FAQ">
+                                <i className="fa-regular fa-question-circle fa-lg"></i>
+                            </a>
+                        </li>
+
+                        <li className="nav-item d-flex align-items-center px-2">
+                            <span className="border-start border-2 h-50"></span>
+                        </li>
+
+                        {/* Profile */}
+                        <li className="nav-item dropdown">
+                            <a className="nav-link d-flex align-items-center" id="userDropdown" role="button" data-bs-toggle="dropdown" style={{ cursor: 'pointer' }}>
+                                <Image src="/assets/groupmates/romawak.jpg" width={35} height={35} className="rounded-circle user-profile" alt="User Profile" />
                             </a>
                             <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                 <li>
-                                    <a className="dropdown-item"
-                                        onClick={() => navigateTo('/profile')}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        <i className="fa-solid fa-user me-2"></i>
-                                        Profile
+                                    <a className="dropdown-item" onClick={() => navigateTo('/profile')} style={{ cursor: 'pointer' }}>
+                                        <i className="fa-solid fa-user me-2"></i> Profile
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="dropdown-item"
-                                        onClick={() => navigateTo('/settings')}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        <i className="fa-solid fa-gear me-2"></i>
-                                        Settings
+                                    <a className="dropdown-item" onClick={() => navigateTo('/settings')} style={{ cursor: 'pointer' }}>
+                                        <i className="fa-solid fa-gear me-2"></i> Settings
                                     </a>
                                 </li>
-                                <hr />
+                                <hr className="my-1"/>
                                 <li>
-                                    <a className="dropdown-item text-danger"
-                                        onClick={() => navigateTo('/logout')}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        <i className="fa-solid fa-right-from-bracket me-2"></i>
-                                        Logout
+                                    <a className="dropdown-item text-danger" onClick={() => alert('fuck you f bitch tnginamo') } style={{ cursor: 'pointer' }}>
+                                        <i className="fa-solid fa-right-from-bracket me-2"></i> Logout
                                     </a>
                                 </li>
                             </ul>
                         </li>
-
                     </ul>
+
                 </div>
             </div>
         </nav>

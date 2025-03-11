@@ -11,10 +11,7 @@ body {
   transition: transform 0.3s;
   border-radius: 15px;
   overflow: hidden;
-}
-
-.destination-card:hover {
-  transform: translateY(-10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-pills .nav-link {
