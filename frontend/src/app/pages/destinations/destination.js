@@ -85,7 +85,7 @@ export default function DestinationComponent() {
                     <i className="fa-solid fa-magnifying-glass position-absolute start-0 ps-3 text-muted"></i>
                     <input
                         type="text"
-                        className="form-control ps-5 pe-5"
+                        className="form-control ps-5"
                         placeholder="Search Destination..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
@@ -93,7 +93,7 @@ export default function DestinationComponent() {
                     {searchTerm && (
                         <button
                             type="button"
-                            className="btn position-absolute end-0 me-3 p-0"
+                            className="btn position-absolute end-0 me-5"
                             onClick={() => setSearchTerm("")}
                             style={{ border: "none", background: "transparent" }}
                         >
@@ -142,11 +142,10 @@ export default function DestinationComponent() {
                     </div>
                 )}
 
-                {/* Destination list */}
                 <div className="row">
                     {filteredDestinations.map((destination, index) => (
                         <div key={index} className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay={index * 100}>
-                            <div className="destination-card">
+                            <div className="destination-card" onClick={() => router.push(destination.filepath)} style={{ cursor: "pointer" }}>
                                 <Image
                                     src={destination.image}
                                     width={600}
@@ -157,18 +156,18 @@ export default function DestinationComponent() {
                                 />
                                 <div className="p-4 bg-white shadow-sm rounded border">
                                     <h4 className="fw-semibold mb-2">{destination.name}</h4>
-                                    <p className="text-muted mb-2">
+                                    <p className="text-muted small mb-2">
                                         <i className="bi bi-geo-alt-fill me-1"></i> {destination.location}
                                     </p>
                                     <p className="text-secondary mb-3">{destination.description}</p>
-                                    <span className="badge bg-primary rounded-pill px-3 py-2">{destination.type}</span>
+                                    <span className="badge absolute bg-primary rounded-pill px-3 py-2">{destination.type}</span>
                                 </div>
-
                             </div>
                         </div>
                     ))}
                 </div>
-                
+
+
                 {filteredDestinations.length === 0 && <p className="text-center">No destinations found.</p>}
             </div>
         </section>

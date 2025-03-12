@@ -127,7 +127,7 @@ const Header = () => {
                             </a>
                             <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                 <li>
-                                    <a className="dropdown-item" onClick={() => navigateTo('/profile')} style={{ cursor: 'pointer' }}>
+                                    <a className="dropdown-item" onClick={() => navigateTo('/screens/tangkaan-beach')} style={{ cursor: 'pointer' }}>
                                         <i className="fa-solid fa-user me-2"></i> Profile
                                     </a>
                                 </li>

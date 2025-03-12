@@ -6,6 +6,7 @@ const destinations = {
             location: "Padre Burgos",
             description: "A white sand beach with crystal-clear waters, ideal for snorkeling and diving.",
             image: "/assets/photos/sample_image.jpg",
+            filepath: "/screens/tangkaan-beach"
         },
         {
             name: "Silago Beach",
@@ -28,6 +29,13 @@ const destinations = {
             description: "A long stretch of fine sand beach, popular for sunrise and sunset views.",
             image: "/assets/photos/sample_image.jpg",
         },
+        {
+            name: "Bitoon Beach",
+            type: "Beach",
+            location: "Silago",
+            description: "A serene beach with powdery white sand, turquoise waters, and a peaceful ambiance, perfect for relaxation and nature lovers.",
+            image: "/assets/photos/sample_image.jpg",
+        }
     ],
     heritage: [
         {
@@ -68,24 +76,24 @@ const destinations = {
     ],
     caves: [
         {
-            name: "Demoloc Caves",
+            name: "Demoloc Cave",
             type: "Caves",
             location: "Malitbog",
             description: "A hidden gem with impressive rock formations and crystal-clear underground pools.",
             image: "/assets/photos/sample_image.jpg",
         },
         {
-            name: "Cambaro Caves",
+            name: "Cambaro Cave",
             type: "Caves",
             location: "Macrohon",
             description: "A cave system with stalactites and stalagmites, located near Macrohon.",
             image: "/assets/photos/sample_image.jpg",
         },
         {
-            name: "Guinsuhotan Cave & Cagnitoan Falls",
+            name: "Guinsuhotan Cave",
             type: "Caves",
             location: "Maasin",
-            description: "A stunning combination of a cave and waterfalls, ideal for adventure seekers.",
+            description: "A cave with stunning rock formations, underground streams, and a scenic waterfall at the entrance.",
             image: "/assets/photos/sample_image.jpg",
         },
     ],
@@ -138,12 +146,14 @@ const destinations = {
     resorts: [
         {
             name: "Dongon Hillside Resort",
+            type: "Resort",
             location: "Maasin",
             description: "A budget-friendly resort offering a scenic view of the hills and the sea.",
             image: "/assets/photos/sample_image.jpg",
         },
         {
             name: "Banahaw Cold Spring",
+            type: "Resort",
             location: "Macrohon",
             description: "A natural spring with refreshingly cold waters, surrounded by greenery.",
             image: "/assets/photos/sample_image.jpg",
@@ -152,6 +162,7 @@ const destinations = {
     parks: [
         {
             name: "Danao Forest Park",
+            type: "Park",
             location: "Maasin",
             description: "A lush forest park with hiking trails and a view deck overlooking the city.",
             image: "/assets/photos/sample_image.jpg",
