@@ -6,7 +6,7 @@ export const metadata = {
     description: "Explore the beauty of Tangkaan Beach in Southern Leyte through this virtual tour.",
 };
 
-export default async function SogodBayVR() {
+export default async function TangkaanBeachVR() {
 
     const initialScenes = {
         scene1: {

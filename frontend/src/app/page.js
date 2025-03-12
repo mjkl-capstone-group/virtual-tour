@@ -123,15 +123,15 @@ export default function Home() {
                   <section className="">
                     <div className="row g-4">
 
-                      {/* Sogod Bay */}
+                      {/* Silago Beach */}
                       <div className="col-md-4" data-aos="fade-up" data-aos-delay="100">
                         <div className="destination-card">
                           <Image src="/assets/photos/sogod-bay.jpg" width={600} height={400} className="img-fluid"
-                            alt="Sogod Bay" style={{ objectFit: "cover", height: "200px", width: "100%" }} />
+                            alt="Silago Beach" style={{ objectFit: "cover", height: "200px", width: "100%" }} />
                           <div className="p-3 bg-white">
-                            <h4>Sogod Bay</h4>
-                            <p>Dive into the whale shark capital of Southern Leyte</p>
-                            <button className="btn" style={{ color: 'white', background: 'black' }} onClick={() => navigateTo('/vr-screens/sogod-bay/')}>Virtual Tour</button>
+                            <h4>Silago Beach</h4>
+                            <p>Dive into the unspoiled beauty of Silago Beach</p>
+                            <button className="btn" style={{ color: 'white', background: 'black' }} onClick={() => navigateTo('/screens/beach/silago-beach')}>Virtual Tour</button>
                           </div>
                         </div>
                       </div>
@@ -144,7 +144,7 @@ export default function Home() {
                           <div className="p-3 bg-white">
                             <h4>Tangkaan Beach</h4>
                             <p>White sand beach with stunning sunset views</p>
-                            <button className="btn" style={{ color: 'white', background: 'black' }} onClick={() => navigateTo('/vr-screens/tangkaan-beach/')}>Virtual Tour</button>
+                            <button className="btn" style={{ color: 'white', background: 'black' }} onClick={() => navigateTo('/screens/beach/tangkaan-beach/')}>Virtual Tour</button>
                           </div>
                         </div>
                       </div>

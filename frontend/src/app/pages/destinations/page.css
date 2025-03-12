@@ -27,3 +27,8 @@
     height: 3px;
     background: var(--secondary-color);
 }
+
+.destination-card:hover {
+    box-shadow: 0 0 15px var(--secondary-color) !important;
+}
+

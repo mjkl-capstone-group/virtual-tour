@@ -25,7 +25,7 @@ const teamMembers = [
         image: `${assetsURL.profilePicture}romawak.jpg`,
         description: "Designs and develops the web application, ensuring both functionality and an intuitive user experience.",
         socials: {
-            facebook: "#",
+            facebook: "https://www.facebook.com/mcrromawak/",
             twitter: "#",
             linkedin: "#",
             github: "#"
