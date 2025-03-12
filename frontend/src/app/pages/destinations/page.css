@@ -28,7 +28,15 @@
     background: var(--secondary-color);
 }
 
-.destination-card:hover {
-    box-shadow: 0 0 15px var(--secondary-color) !important;
+.destination-card {
+    transition: transform 0.3s ease-in-out;
 }
 
+.destination-card:hover {
+    box-shadow: 0 0 15px var(--secondary-color) !important;
+    transform: scale(1.01);
+}
+
+.badge{
+    background-color: var(--primary-color) ;
+}

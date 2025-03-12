@@ -139,7 +139,7 @@ export default function Home() {
                       {/* Tangkaan Beach */}
                       <div className="col-md-4" data-aos="fade-up" data-aos-delay="200">
                         <div className="destination-card">
-                          <Image src="/assets/photos/tangkaan.jpg" width={600} height={400} className="img-fluid"
+                          <Image src="/assets/photos/beaches/tangkaan.jpg" width={600} height={400} className="img-fluid"
                             alt="Tangkaan Beach" style={{ objectFit: "cover", height: "200px", width: "100%" }} />
                           <div className="p-3 bg-white">
                             <h4>Tangkaan Beach</h4>
@@ -152,7 +152,7 @@ export default function Home() {
                       {/* Bitoon Beach */}
                       <div className="col-md-4" data-aos="fade-up" data-aos-delay="300">
                         <div className="destination-card">
-                          <Image src="/assets/photos/bitoon.jpg" width={600} height={400} className="img-fluid"
+                          <Image src="/assets/photos/beaches/bitoon.jpg" width={600} height={400} className="img-fluid"
                             alt="Bitoon Beach" style={{ objectFit: "cover", height: "200px", width: "100%" }} />
                           <div className="p-3 bg-white">
                             <h4>Bitoon Beach</h4>
@@ -223,21 +223,18 @@ export default function Home() {
           </h2>
 
           <div className="row g-4 text-center">
-            {/* Local Expertise */}
             <div className="col-md-4" data-aos="fade-up" data-aos-delay="100">
               <i className="fas fa-map-marked-alt feature-icon mb-3"></i>
               <h4>Local Expertise</h4>
               <p>Guided by Southern Leyte natives with deep cultural knowledge</p>
             </div>
 
-            {/* 360° Experience */}
             <div className="col-md-4" data-aos="fade-up" data-aos-delay="200">
               <i className="fas fa-vr-cardboard feature-icon mb-3"></i>
               <h4>360° Experience</h4>
               <p>Immersive virtual tours of our province's best spots</p>
             </div>
 
-            {/* Marine Conservation */}
             <div className="col-md-4" data-aos="fade-up" data-aos-delay="300">
               <i className="fas fa-fish feature-icon mb-3"></i>
               <h4>Marine Conservation</h4>
@@ -303,7 +300,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer Section */}
       <div data-aos="fade-up" data-aos-delay='10'>
         < Footer />
       </div>

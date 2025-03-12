@@ -81,7 +81,7 @@ export default function DestinationComponent() {
                 </h2>
 
                 {/* Search input and filter toggle button */}
-                <div className="mb-3 d-flex align-items-center position-relative" style={{ maxWidth: "450px" }}>
+                <div className="mb-3 d-flex align-items-center position-relative mt-5" style={{ maxWidth: "450px" }}>
                     <i className="fa-solid fa-magnifying-glass position-absolute start-0 ps-3 text-muted"></i>
                     <input
                         type="text"
@@ -142,7 +142,8 @@ export default function DestinationComponent() {
                     </div>
                 )}
 
-                <div className="row">
+                {/*Card*/}
+                <div className="row mt-4">
                     {filteredDestinations.map((destination, index) => (
                         <div key={index} className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay={index * 100}>
                             <div className="destination-card" onClick={() => router.push(destination.filepath)} style={{ cursor: "pointer" }}>
@@ -160,7 +161,7 @@ export default function DestinationComponent() {
                                         <i className="bi bi-geo-alt-fill me-1"></i> {destination.location}
                                     </p>
                                     <p className="text-secondary mb-3">{destination.description}</p>
-                                    <span className="badge absolute bg-primary rounded-pill px-3 py-2">{destination.type}</span>
+                                    <span className="badge absolute rounded-pill px-3 py-2">{destination.type}</span>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +169,7 @@ export default function DestinationComponent() {
                 </div>
 
 
-                {filteredDestinations.length === 0 && <p className="text-center">No destinations found.</p>}
+                {filteredDestinations.length === 0 && <p className="text-center" style={{ marginTop: "100px", marginBottom: "100px"}}>No destinations found.</p>}
             </div>
         </section>
     );

@@ -66,38 +66,13 @@ const Header = () => {
                                 Destination
                             </a>
                         </li>
-                        <li className="nav-item dropdown mt-1">
-                            <a className="nav-link dropdown-toggle"
-                                id="communityDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                style={{ color: 'black' }}
+                        <li className="nav-item mt-1">
+                            <a className="nav-link"
+                                onClick={() => navigateTo('/pages/forums')}
+                                style={{ color: 'black', cursor: 'pointer' }}
                             >
-                                Community
+                                Forums
                             </a>
-                            <ul className="dropdown-menu mb-2" aria-labelledby="communityDropdown">
-                                <li>
-                                    <a className="dropdown-item"
-                                        onClick={() => navigateTo('/pages/community/reviews')}
-                                        style={{ cursor: 'pointer' }}>
-                                        <i className="fi fi-ss-review me-2"></i> Reviews
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="dropdown-item"
-                                        onClick={() => navigateTo('/pages/community/forums')}
-                                        style={{ cursor: 'pointer' }}>
-                                        <i className="fi fi-sr-meeting me-2"></i> Forums
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="dropdown-item"
-                                        onClick={() => navigateTo('/pages/community/help-faq')}
-                                        style={{ cursor: 'pointer' }}>
-                                        <i className="fi fi-ss-comments-question me-2"></i> Help/FAQ
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
 
@@ -136,9 +111,9 @@ const Header = () => {
                                         <i className="fa-solid fa-gear me-2"></i> Settings
                                     </a>
                                 </li>
-                                <hr className="my-1"/>
+                                <hr className="my-1" />
                                 <li>
-                                    <a className="dropdown-item text-danger" onClick={() => alert('fuck you f bitch tnginamo') } style={{ cursor: 'pointer' }}>
+                                    <a className="dropdown-item text-danger" onClick={() => alert('fuck you f bitch tnginamo')} style={{ cursor: 'pointer' }}>
                                         <i className="fa-solid fa-right-from-bracket me-2"></i> Logout
                                     </a>
                                 </li>
