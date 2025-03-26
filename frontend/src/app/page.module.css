@@ -1,7 +1,3 @@
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
 .feature-icon {
   font-size: 3rem;
   color: var(--secondary-color);
@@ -14,16 +10,16 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.nav-pills .nav-link {
+.nav-pills :global(.nav-link) {
   color: black !important;
 }
 
-.nav-pills .nav-link.active {
+.nav-pills :global(.nav-link.active) {
   background-color: black !important;
   color: white !important;
 }
 
-.nav-pills .nav-link:hover {
+.nav-pills :global(.nav-link:hover) {
   border: 1px solid black !important;
 }
 
@@ -35,8 +31,9 @@ body {
 
 .section-title {
   position: relative;
-  display: inline-block;
+  display: block;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .section-title::after {
@@ -50,13 +47,4 @@ body {
   background: var(--secondary-color);
 }
 
-.section-title-center {
-  display: block;
-  text-align: center;
-}
-
-.categories-title {
-  position: relative;
-  display: inline-block;
-}
 

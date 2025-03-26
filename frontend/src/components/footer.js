@@ -34,7 +34,7 @@ const Footer = () => {
                         <p style={{ fontSize: '0.9rem' }}>
                             Email: mjkl.capstonegroup@gmail.com
                             <br />
-                            Phone: +63 912 345 6789
+                            Phone: +63 994 443 9582
                         </p>
                     </div>
 

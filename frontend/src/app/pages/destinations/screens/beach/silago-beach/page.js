@@ -11,6 +11,7 @@ export default async function SogodBayVR() {
     const initialScenes = {
         scene1: {
             panorama: `${assetsURL.panoramas}pureshotsala.jpg`,
+            // panorama: "/assets/panoramas/sogod-bay/pureshotsala.jpg",
             nextScene: "scene2",
             hotspotYaw: 188,
             hotspotPitch: -20,
@@ -20,6 +21,7 @@ export default async function SogodBayVR() {
         },
         scene2: {
             panorama: `${assetsURL.panoramas}nextkitchen.jpg`,
+            // panorama: "/assets/panoramas/sogod-bay/pureshotsala.jpg",
             nextScene: "scene1",
             hotspotYaw: -10,
             hotspotPitch: -20,

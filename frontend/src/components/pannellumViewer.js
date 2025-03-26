@@ -44,7 +44,7 @@ export default function pannellumViewer({ initialScenes }) {
 
         loadPannellum();
 
-        // Start music when component mounts
+        // Audio
         if (audioRef.current) {
             audioRef.current.play().catch(error => console.error("Audio play error:", error));
         }
@@ -60,10 +60,10 @@ export default function pannellumViewer({ initialScenes }) {
     return (
         <div className="relative w-full h-screen">
             {/* Background Music */}
-            <audio ref={audioRef} loop>
+            {/* <audio ref={audioRef} loop>
                 <source src="/assets/bgmusic.mp3" type="audio/mp3" />
                 Your browser does not support the audio element.
-            </audio>
+            </audio> */}
 
             <div id="panorama" className="w-full h-screen"></div>
         </div>
