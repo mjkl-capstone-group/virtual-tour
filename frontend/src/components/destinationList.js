@@ -6,7 +6,7 @@ const destinations = {
             location: "Padre Burgos",
             description: "A white sand beach with crystal-clear waters, ideal for snorkeling and diving.",
             image: "/assets/photos/beaches/tangkaan.jpg",
-            filepath: "/screens/tangkaan-beach"
+            filepath: "/pages/destinations/screens/beach/tangkaan-beach"
         },
         {
             name: "Crescent Beach Resort",
@@ -14,6 +14,7 @@ const destinations = {
             location: "Liloan",
             description: "A hidden gem with a crescent-shaped shoreline, soft white sand, and crystal-clear waters. Perfect for swimming, relaxation, and sunset views.",
             image: "/assets/photos/beaches/crescent_beach.jpg",
+            filepath: "/pages/destinations/screens/beach/crescent-beach-resort"
         },
         {
             name: "Bitoon Beach",
@@ -46,6 +47,7 @@ const destinations = {
             location: "Sogod",
             description: "The tallest bridge in the Philippines, offering breathtaking views and adventure activities.",
             image: "/assets/photos/heritage/agas-agas-bridge.jpg",
+            filepath: "/pages/destinations/screens/heritage/agas-agas-bridge"
         },
         {
             name: "Our Lady of the Assumption",

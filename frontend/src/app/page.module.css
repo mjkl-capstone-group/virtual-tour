@@ -31,8 +31,9 @@
 
 .section-title {
   position: relative;
-  display: inline-block;
+  display: block;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .section-title::after {
@@ -46,13 +47,4 @@
   background: var(--secondary-color);
 }
 
-.section-title-center {
-  display: block;
-  text-align: center;
-}
-
-.categories-title {
-  position: relative;
-  display: inline-block;
-}
 

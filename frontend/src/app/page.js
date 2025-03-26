@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero"
+import Button from "@/components/ui/button";
 
 export default function Home() {
   useEffect(() => {
@@ -42,7 +43,7 @@ export default function Home() {
       {/* How to Use the Virtual Tour Section */}
       <section className="py-5 bg-light" data-aos="fade-up">
         <div className="container">
-          <h2 className={`${styles["section-title"]} section-title-center mb-4`}>
+          <h2 className={`${styles["section-title"]} mb-4`}>
             <strong>How to Use the Virtual Tour</strong>
           </h2>
           <p className="text-center mb-4">
@@ -131,7 +132,7 @@ export default function Home() {
                           <div className="p-3 bg-white">
                             <h4>Silago Beach</h4>
                             <p>Dive into the unspoiled beauty of Silago Beach</p>
-                            <button className="btn" style={{ color: 'white', background: 'black' }} onClick={() => navigateTo('/screens/beach/silago-beach')}>Virtual Tour</button>
+                            <Button />
                           </div>
                         </div>
                       </div>
@@ -144,7 +145,7 @@ export default function Home() {
                           <div className="p-3 bg-white">
                             <h4>Tangkaan Beach</h4>
                             <p>White sand beach with stunning sunset views</p>
-                            <button className="btn" style={{ color: 'white', background: 'black' }} onClick={() => navigateTo('/screens/beach/tangkaan-beach/')}>Virtual Tour</button>
+                            <Button />
                           </div>
                         </div>
                       </div>
@@ -157,7 +158,7 @@ export default function Home() {
                           <div className="p-3 bg-white">
                             <h4>Bitoon Beach</h4>
                             <p>Secluded paradise with crystal-clear waters</p>
-                            <button className="btn" style={{ color: 'white', background: 'black' }} onClick={() => navigateToSample()}>Virtual Tour</button>
+                            <Button />
                           </div>
                         </div>
                       </div>
@@ -222,7 +223,7 @@ export default function Home() {
             <strong> Why Choose Us </strong>
           </h2>
 
-          <div className="row g-4 text-center">
+          <div className="row g-4 text-center mt-1">
             <div className="col-md-4" data-aos="fade-up" data-aos-delay="100">
               <i className={`fas fa-map-marked-alt mb-3 ${styles["feature-icon"]}`}></i>
               <h4>Local Expertise</h4>
@@ -254,7 +255,7 @@ export default function Home() {
             Engage with fellow travelers, explorers, and locals who share a passion for Southern Leyte.
           </p>
 
-          <div className="row g-4">
+          <div className="row g-4 mt-1">
             <div className="col-md-4" data-aos="fade-up" data-aos-delay="100">
               <h4 className="fw-semibold">Share Your Experience</h4>
               <p className="text-muted">Upload your own travel stories and tips to inspire others.</p>

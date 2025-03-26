@@ -86,7 +86,7 @@ const Header = () => {
 
                         {/* Question Icon */}
                         <li className="nav-item mt-1">
-                            <a className="nav-link" onClick={() => navigateTo('/questions')} style={{ cursor: 'pointer' }} title="Help/FAQ">
+                            <a className="nav-link" onClick={() => navigateTo('/test-page/offcanvas')} style={{ cursor: 'pointer' }} title="Help/FAQ">
                                 <i className="fa-regular fa-question-circle fa-lg"></i>
                             </a>
                         </li>
