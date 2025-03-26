@@ -6,7 +6,7 @@ import "./component.css";
 
 const slides = [
     {
-        image: "/assets/photos/san-pablo-island.jpg",
+        image: "/assets/photos/others/san-pablo-island.jpg",
         title: "Discover Southern Leyte",
         caption: "Embark on a journey through breathtaking landscapes and rich history."
     },
@@ -43,7 +43,6 @@ function ControlledCarousel() {
                     </Carousel.Item>
                 ))}
             </Carousel>
-
         </>
     );
 }

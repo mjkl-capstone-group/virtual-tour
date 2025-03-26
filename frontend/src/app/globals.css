@@ -9,3 +9,7 @@
     width: 500px;
     height: 100vh;
 }
+
+* {
+    font-family: 'Poppins', sans-serif;
+}

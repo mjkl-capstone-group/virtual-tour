@@ -3,8 +3,8 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import AOS from "aos";
-import "./page.css";
 import assetsURL from "@/utils/supabaseAssets";
+import styles from "./ourteam.module.css";
 
 const teamMembers = [
     {
@@ -67,8 +67,8 @@ export default function Team() {
     }, []);
 
     return (
-        <div className="container py-5 position-relative">
-            <div className="timeline-line"></div>
+        <div className={`${styles.container} container py-5 position-relative`}>
+            <div className={`${styles["timeline-line"]}`}></div>
             {teamMembers.map((member, index) => (
                 <div key={index} className="row align-items-center mb-5">
                     {/* Alternating layout */}
@@ -76,7 +76,7 @@ export default function Team() {
                         <>
                             {/* Left Column: Card */}
                             <div className="col-md-5" data-aos="fade-right" data-aos-delay="100">
-                                <div className="card p-3 shadow">
+                                <div className= {`${styles.card} card p-3 shadow`}>
                                     <div className="row align-items-center">
                                         <div className="col-lg-4 col-md-5 col-12 text-center">
                                             <Image
@@ -84,12 +84,12 @@ export default function Team() {
                                                 alt={member.name}
                                                 width={100}
                                                 height={100}
-                                                className="rounded-circle member-image"
+                                                className={`rounded-circle ${styles["member-image"]}`}
                                             />
                                         </div>
                                         <div className="col-lg-8 col-md-8 col-12 text-center text-md-start">
                                             <h4 className="mb-0">{member.name}</h4>
-                                            <h6 className="text-muted custom-role">{member.role}</h6>
+                                            <h6 className={`text-muted ${styles["custom-role"]}`}>{member.role}</h6>
                                         </div>
                                     </div>
                                     <p className="text-muted mt-2">{member.description}</p>
@@ -111,7 +111,7 @@ export default function Team() {
                             </div>
                             {/* Middle Column: Timeline Dot */}
                             <div className="col-md-2 text-center position-relative">
-                                <div className="timeline-dot"></div>
+                                <div className={`${styles["timeline-dot"]}`}></div>
                             </div>
                             {/* Right Column: Empty Space */}
                             <div className="col-md-5"></div>
@@ -122,11 +122,11 @@ export default function Team() {
                             <div className="col-md-5"></div>
                             {/* Middle Column: Timeline Dot */}
                             <div className="col-md-2 text-center position-relative">
-                                <div className="timeline-dot"></div>
+                                <div className={`${styles["timeline-dot"]}`}></div>
                             </div>
                             {/* Right Column: Card */}
                             <div className="col-md-5" data-aos="fade-left" data-aos-delay="100">
-                                <div className="card p-3 shadow">
+                                <div className={`${styles.card} card p-3 shadow`}>
                                     <div className="row align-items-center">
                                         <div className="col-lg-4 col-md-5 col-12 text-center">
                                             <Image
@@ -134,12 +134,12 @@ export default function Team() {
                                                 alt={member.name}
                                                 width={100}
                                                 height={100}
-                                                className="rounded-circle member-image"
+                                                className={`rounded-circle ${styles["member-image"]}`}
                                             />
                                         </div>
                                         <div className="col-lg-8 col-md-8 col-12 text-center text-md-start">
                                             <h4 className="mb-0">{member.name}</h4>
-                                            <h6 className="text-muted custom-role">{member.role}</h6>
+                                            <h6 className={`text-muted ${styles["custom-role"]}`}>{member.role}</h6>
                                         </div>
                                     </div>
                                     <p className="text-muted mt-2">{member.description}</p>

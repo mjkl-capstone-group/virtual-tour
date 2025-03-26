@@ -5,7 +5,7 @@ import AOS from "aos";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import destinationsData from "@/components/destinationList";
-import styles from "./destination.module.css";
+import "./page.css";
 
 export default function DestinationComponent() {
     const router = useRouter();
@@ -76,7 +76,7 @@ export default function DestinationComponent() {
     return (
         <section className="py-5" id="destinations">
             <div className="container">
-                <h2 className={`${styles["destination-title"]} text-center mb-4`} data-aos="fade-up">
+                <h2 className="destination-title text-center mb-4" data-aos="fade-up">
                     <strong>Destinations</strong>
                 </h2>
 
@@ -146,7 +146,7 @@ export default function DestinationComponent() {
                 <div className="row mt-4">
                     {filteredDestinations.map((destination, index) => (
                         <div key={index} className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay={index * 100}>
-                            <div className={`${styles["destination-card"]}`} onClick={() => router.push(destination.filepath)} style={{ cursor: "pointer" }}>
+                            <div className="destination-card" onClick={() => router.push(destination.filepath)} style={{ cursor: "pointer" }}>
                                 <Image
                                     src={destination.image}
                                     width={600}
@@ -161,7 +161,7 @@ export default function DestinationComponent() {
                                         <i className="bi bi-geo-alt-fill me-1"></i> {destination.location}
                                     </p>
                                     <p className="text-secondary mb-3">{destination.description}</p>
-                                    <span className={`badge absolute rounded-pill px-3 py-2 ${styles.badgeTitle}`} >{destination.type}</span>
+                                    <span className="badge absolute rounded-pill px-3 py-2">{destination.type}</span>
                                 </div>
                             </div>
                         </div>

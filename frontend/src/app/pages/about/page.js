@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Team from "./ourteam";
+import styles from "./ourteam.module.css";
 
 export const metadata = {
     title: "About Us | PERIPLOS",
@@ -16,7 +17,7 @@ export default function AboutUs() {
             <div className="bg-light">
 
                 {/* Hero Section */}
-                <section className="text-white text-center py-5 custom-hero">
+                <section className={`text-white text-center py-5 ${styles["custom-hero"]}`}>
                     <div className="container"
                         style={{ maxHeight: '440px' }}
                     >

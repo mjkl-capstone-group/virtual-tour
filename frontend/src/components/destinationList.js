@@ -21,6 +21,7 @@ const destinations = {
             location: "Silago",
             description: "A serene beach with powdery white sand, turquoise waters, and a peaceful ambiance, perfect for relaxation and nature lovers.",
             image: "/assets/photos/beaches/bitoon.jpg",
+            filepath: "/screens/beach/bitoon-beach",
         },
         {
             name: "Molopolo White Beach",

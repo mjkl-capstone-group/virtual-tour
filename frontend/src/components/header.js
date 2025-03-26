@@ -79,7 +79,7 @@ const Header = () => {
                     <ul className="navbar-nav ms-auto">
                         {/* Discover Icon */}
                         <li className="nav-item mt-1">
-                            <a className="nav-link" onClick={() => navigateTo('/test-page/offcanvas')} style={{ cursor: 'pointer' }} title="Discover">
+                            <a className="nav-link" onClick={() => navigateTo('/test-page/screen-testing')} style={{ cursor: 'pointer' }} title="Discover">
                                 <i className="fa-regular fa-compass fa-lg"></i>
                             </a>
                         </li>
