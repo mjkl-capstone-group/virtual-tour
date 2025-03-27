@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import "./component.css";
 
 export default function pannellumViewer({ initialScenes }) {
     const [currentScene, setCurrentScene] = useState("scene1");

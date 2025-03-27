@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero"
-import Button from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <>
       {/* Header Section */}
-      <Header />
+        <Header />
 
       {/* Hero Section */}
       <section className="hero-section" data-aos="fade-up">
@@ -83,7 +83,7 @@ export default function Home() {
       */}
       <section className="py-5" id="destinations">
         <div className="container py-5">
-          <h2 className={`${styles["section-title"]} text-center mb-5`} data-aos="fade-up">
+          <h2 className={`${styles["section-title"]} text-center mb-5`} data-aos="fade-up" data-aos-delay="10">
             <strong>Featured Destinations</strong>
           </h2>
 

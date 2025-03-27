@@ -14,6 +14,7 @@ export default function NotFound() {
                 className='mt-0'
                 src="/assets/photos/others/giphy.gif"
                 alt="404 error GIF"
+                unoptimized
                 width={150}
                 height={150}
             />

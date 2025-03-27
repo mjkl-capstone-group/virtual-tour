@@ -1,4 +1,5 @@
 @import "@flaticon/flaticon-uicons/css/all/all";
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
 :root {
     --primary-color: #1a446c;
@@ -6,10 +7,31 @@
 }
 
 #panorama {
-    width: 500px;
+    width: 100%;
     height: 100vh;
 }
 
 * {
     font-family: 'Poppins', sans-serif;
+}
+
+
+.navbar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#navbarNav {
+    color: black !important;
+}
+
+.carousel-image {
+    background: linear-gradient(rgba(26, 68, 108, 0.7), rgba(61, 180, 192, 0.3));
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+
+.user-profile:hover {
+    outline: 4px solid #d3d3d3;
 }
