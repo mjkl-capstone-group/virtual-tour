@@ -89,7 +89,7 @@ export default function TangkaanBeach() {
 
                         <div className="row align-items-center mt-2">
                             <div className="col-auto mt-1">
-                                <DestinationsButton href="/pages/destinations/beach/tangkaan-beach/virtual-tour"/>
+                                <DestinationsButton href="/destination/beach/tangkaan-beach/virtual-tour"/>
                             </div>
                             <div className="col-auto mt-1">
                                 <div className="dropdown">

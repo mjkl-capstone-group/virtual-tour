@@ -52,7 +52,7 @@ const Header = () => {
                         </li>
                         <li className="nav-item mt-1">
                             <Link className="nav-link"
-                                href="/pages/destinations"
+                                href="/destination"
                                 style={{ color: 'black'}}
                             >
                                 Destination
@@ -60,7 +60,7 @@ const Header = () => {
                         </li>
                         <li className="nav-item mt-1">
                             <Link className="nav-link"
-                                href="/pages/forums"
+                                href="/forums"
                                 style={{ color: 'black'}}
                             >
                                 Forums
@@ -76,7 +76,7 @@ const Header = () => {
                         </li>
 
                         <li className="nav-item mt-1">
-                            <Link className="nav-link" href="/test-page/offcanvas" title="Help/FAQ">
+                            <Link className="nav-link" href="/test-page/modal" title="Help/FAQ">
                                 <i className="fa-regular fa-question-circle fa-lg"></i>
                             </Link>
                         </li>

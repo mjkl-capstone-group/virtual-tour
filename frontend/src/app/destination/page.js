@@ -6,10 +6,10 @@ import Footer from "@/components/footer";
 import styles from "./destination.module.css";
 
 export const metadata = {
-    title: "Destinations | PERIPLOS",
+    title: "Destination | PERIPLOS",
     description: "Experience immersive 360° virtual tours of top destinations.",
     openGraph: {
-        title: "Destinations",
+        title: "Destination",
         description: "Discover and explore stunning destinations with immersive virtual tours.",
     },
 };

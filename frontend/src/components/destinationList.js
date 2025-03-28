@@ -6,7 +6,7 @@ const destinations = {
             location: "Padre Burgos",
             description: "A white sand beach with crystal-clear waters, ideal for snorkeling and diving.",
             image: "/assets/photos/beaches/tangkaan.jpg",
-            filepath: "/pages/destinations/beach/tangkaan-beach"
+            filepath: "/destination/beach/tangkaan-beach"
         },
         {
             name: "Crescent Beach Resort",
@@ -14,7 +14,7 @@ const destinations = {
             location: "Liloan",
             description: "A hidden gem with a crescent-shaped shoreline, soft white sand, and crystal-clear waters. Perfect for swimming, relaxation, and sunset views.",
             image: "/assets/photos/beaches/crescent_beach.jpg",
-            filepath: "/pages/destinations/beach/crescent-beach-resort"
+            filepath: "/destination/beach/crescent-beach-resort"
         },
         {
             name: "Bitoon Beach",
@@ -22,7 +22,7 @@ const destinations = {
             location: "Silago",
             description: "A serene beach with powdery white sand, turquoise waters, and a peaceful ambiance, perfect for relaxation and nature lovers.",
             image: "/assets/photos/beaches/bitoon.jpg",
-            filepath: "/pages/destinations/beach/bitoon-beach",
+            filepath: "/destination/beach/bitoon-beach",
         },
         {
             name: "Molopolo White Beach",
@@ -31,7 +31,7 @@ const destinations = {
             description: "A beautiful white sand beach known for its crystal-clear waters and relaxing atmosphere.",
             activities: ["Swimming", "Snorkeling", "Picnic", "Beach Volleyball"],
             image: "/assets/photos/beaches/molopolo.jpg",
-            filepath: "/pages/destinations/beach/molopolo-white-beach",
+            filepath: "/destination/beach/molopolo-white-beach",
         },
     ],
     heritage: [
@@ -41,7 +41,7 @@ const destinations = {
             location: "Maasin",
             description: "A pilgrimage site on a hill with a scenic view and a chapel inside a cave.",
             image: "/assets/photos/heritage/monte-cueva-shrine.jpg",
-            filepath: "/pages/destinations/heritage/monte-cueva-shrine",
+            filepath: "/destination/heritage/monte-cueva-shrine",
         },
         {
             name: "Agas-Agas Bridge",
@@ -49,7 +49,7 @@ const destinations = {
             location: "Sogod",
             description: "The tallest bridge in the Philippines, offering breathtaking views and adventure activities.",
             image: "/assets/photos/heritage/agas-agas-bridge.jpg",
-            filepath: "/pages/destinations/heritage/agas-agas-bridge"
+            filepath: "/destination/heritage/agas-agas-bridge"
         },
         {
             name: "Our Lady of the Assumption",

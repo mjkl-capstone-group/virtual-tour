@@ -6,14 +6,42 @@ import Footer from '@/components/footer';
 import { DestinationsButton } from '@/components/ui/button';
 import Link from 'next/link';
 import Head from 'next/head';
-
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function AgasAgasBridge() {
+    const [weatherData, setWeatherData] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [show, setShow] = useState(false);
+    const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
+    const location = 'FXWX+H5Q, Sogod, Southern Leyte';
 
     useEffect(() => {
         import("bootstrap/dist/js/bootstrap.min.js");
     }, []);
+
+    const toggleModal = () => {
+        setShow(!show);
+    };
+
+    useEffect(() => {
+        if (show) {
+            setLoading(true);
+            const fetchWeatherData = async () => {
+                try {
+                    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`);
+                    const data = await response.json();
+                    setWeatherData(data);
+                } catch (error) {
+                    console.error("Error fetching weather data:", error);
+                    setWeatherData(null); // Optional: set a fallback message or error state
+                } finally {
+                    setLoading(false);
+                }
+            };
+
+            fetchWeatherData();
+        }
+    }, [show]);
 
     return (
         <>
@@ -66,11 +94,56 @@ export default function AgasAgasBridge() {
                             </button>
                             <button className="btn btn-outline-dark"
                                 style={{ width: '200px' }}
+                                onClick={toggleModal}
                             >
                                 <i className="fa-solid fa-cloud me-2"></i>
-                                Check Weather
+                                {loading ? 'Loading...' : 'Check Weather'}
                             </button>
                         </div>
+
+                        {show && (
+                            <div className="modal fade show"
+                                style={{ display: 'block' }}
+                                tabIndex="-1"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                                role="dialog"
+                                aria-live="polite"
+                            >
+                                <div className="modal-dialog modal-dialog-centered">
+                                    <div className="modal-content">
+                                        <div className="modal-header text-center">
+                                            <h5 className="modal-title w-100" id="exampleModalLabel">
+                                                Weather Information
+                                            </h5>
+                                        </div>
+                                        <div className="modal-body">
+                                            {weatherData ? (
+                                                <div className="mt-4">
+                                                    <h5>Current Weather</h5>
+                                                    <p><strong>Temperature:</strong> {weatherData.current.temp_c}°C</p>
+                                                    <p><strong>Condition:</strong> {weatherData.current.condition.text}</p>
+                                                    <img src={`https:${weatherData.current.condition.icon}`} alt={weatherData.current.condition.text} />
+                                                </div>
+                                            ) : (
+                                                <p>No weather data available.</p>
+                                            )}
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button
+                                                type="button"
+                                                className="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                                onClick={toggleModal}
+                                            >
+                                                Close
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
                         <div className="d-flex align-items-center gap-3">
                             <h6 className="mb-0">Socials:</h6>
                             <Link href="#" className="text-decoration-none text-dark d-flex align-items-center">
