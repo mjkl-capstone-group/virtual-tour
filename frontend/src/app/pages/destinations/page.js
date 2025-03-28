@@ -3,6 +3,7 @@ import DestinationComponent from "./destination";
 
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import styles from "./destination.module.css";
 
 export const metadata = {
     title: "Destinations | PERIPLOS",
@@ -17,7 +18,9 @@ export default function HomePage() {
     return (
         <>
             <Header />
-
+            <h2 className={`${styles["destination-title"]} text-center mb-4 mt-5`}>
+                <strong>Map of Southern Leyte</strong>
+            </h2>
             <div className="container mt-4">
                 <div className="d-flex justify-content-center">
                     <iframe
@@ -30,8 +33,11 @@ export default function HomePage() {
                     </iframe>
                 </div>
             </div>
-
-            <DestinationComponent />
+            <div className="bg-white py-4">
+                <div className="container">
+                    <DestinationComponent />
+                </div>
+            </div>
             <Footer />
         </>
     );

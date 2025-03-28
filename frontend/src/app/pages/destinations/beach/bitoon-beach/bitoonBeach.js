@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 import { useEffect } from 'react';
 
-export default function MonteCuevaShrine() {
+export default function BitoonBeach() {
 
     useEffect(() => {
         import("bootstrap/dist/js/bootstrap.min.js");
@@ -21,8 +21,8 @@ export default function MonteCuevaShrine() {
                 <div className="row align-items-center">
                     <div className="col-md-6">
                         <Image
-                            src="/assets/photos/heritage/monte-cueva-shrine.jpg"
-                            alt="Monte Cueva Shrine"
+                            src="/assets/photos/beaches/bitoon.jpg"
+                            alt="Bitoon Beach"
                             layout='intrinsic'
                             width={600}
                             height={350}
@@ -34,14 +34,14 @@ export default function MonteCuevaShrine() {
                     </div>
 
                     <div className="col-md-6">
-                        <h1 className='mb-1 fw-bold'>Monte Cueva Shrine</h1>
+                        <h1 className='mb-1 fw-bold'>Bitoon Beach</h1>
 
                         <p className="text-muted">
-                            <a href="https://www.google.com/maps/search/?api=1&query=Monte+Cueva+Shrine"
+                            <a href="https://www.google.com/maps/search/?api=1&query=Bitoon+Beach,Southern+Leyte"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-decoration-none text-muted">
-                                <i className="bi bi-geo-alt me-1"></i> Monte Cueva Shrine, Southern Leyte
+                                <i className="bi bi-geo-alt me-1"></i> 548P+H46, San Ricardo Road, Liloan, Southern Leyte
                             </a>
                         </p>
                         <div className="d-flex align-items-center">
@@ -82,8 +82,7 @@ export default function MonteCuevaShrine() {
                         </div>
 
                         <p className='mt-3'>
-                            Monte Cueva Shrine is a sacred pilgrimage site in Southern Leyte, nestled inside a cave with a breathtaking view.
-                            It is a place of prayer and meditation, offering a serene retreat for visitors seeking spiritual solace.
+                            Bitoon Beach is a serene getaway known for its pristine white sand, crystal-clear waters, and breathtaking sunsets. It is a popular spot for swimming, snorkeling, and relaxation in Southern Leyte.
                         </p>
 
                         <div className="row align-items-center mt-2">

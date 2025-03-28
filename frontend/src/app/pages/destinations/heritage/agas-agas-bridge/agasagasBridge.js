@@ -5,10 +5,11 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { DestinationsButton } from '@/components/ui/button';
 import Link from 'next/link';
+import Head from 'next/head';
 
 import { useEffect } from 'react';
 
-export default function MonteCuevaShrine() {
+export default function AgasAgasBridge() {
 
     useEffect(() => {
         import("bootstrap/dist/js/bootstrap.min.js");
@@ -16,13 +17,17 @@ export default function MonteCuevaShrine() {
 
     return (
         <>
+            <Head>
+                <title>Agas-Agas Bridge | PERIPLOS</title>
+                <meta name="description" content="Agas-Agas Bridge is the highest bridge in the Philippines, built to prevent landslides in the mountainous terrain of Southern Leyte." />
+            </Head>
             <Header />
             <div className="container my-4">
                 <div className="row align-items-center">
                     <div className="col-md-6">
                         <Image
-                            src="/assets/photos/heritage/monte-cueva-shrine.jpg"
-                            alt="Monte Cueva Shrine"
+                            src="/assets/photos/heritage/agas-agas-bridge.jpg"
+                            alt="Agas-Agas Bridge"
                             layout='intrinsic'
                             width={600}
                             height={350}
@@ -34,14 +39,14 @@ export default function MonteCuevaShrine() {
                     </div>
 
                     <div className="col-md-6">
-                        <h1 className='mb-1 fw-bold'>Monte Cueva Shrine</h1>
+                        <h1 className='mb-1 fw-bold'>Agas-Agas Bridge</h1>
 
                         <p className="text-muted">
-                            <a href="https://www.google.com/maps/search/?api=1&query=Monte+Cueva+Shrine"
+                            <a href="https://www.google.com/maps/search/?api=1&query=FXWX+H5Q,+Sogod,+Southern+Leyte"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-decoration-none text-muted">
-                                <i className="bi bi-geo-alt me-1"></i> Monte Cueva Shrine, Southern Leyte
+                                <i className="bi bi-geo-alt me-1"></i> FXWX+H5Q, Sogod, Southern Leyte
                             </a>
                         </p>
                         <div className="d-flex align-items-center">
@@ -82,13 +87,13 @@ export default function MonteCuevaShrine() {
                         </div>
 
                         <p className='mt-3'>
-                            Monte Cueva Shrine is a sacred pilgrimage site in Southern Leyte, nestled inside a cave with a breathtaking view.
-                            It is a place of prayer and meditation, offering a serene retreat for visitors seeking spiritual solace.
+                            The Agas-Agas Bridge is the highest bridge in the Philippines, built to prevent landslides
+                            in the mountainous terrain of Southern Leyte.
                         </p>
 
                         <div className="row align-items-center mt-2">
                             <div className="col-auto mt-1">
-                                <DestinationsButton />
+                                <DestinationsButton href="" />
                             </div>
                             <div className="col-auto mt-1">
                                 <div className="dropdown">

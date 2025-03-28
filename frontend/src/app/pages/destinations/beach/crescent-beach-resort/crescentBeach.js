@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 import { useEffect } from 'react';
 
-export default function MonteCuevaShrine() {
+export default function CrescentBeachResort() {
 
     useEffect(() => {
         import("bootstrap/dist/js/bootstrap.min.js");
@@ -21,8 +21,8 @@ export default function MonteCuevaShrine() {
                 <div className="row align-items-center">
                     <div className="col-md-6">
                         <Image
-                            src="/assets/photos/heritage/monte-cueva-shrine.jpg"
-                            alt="Monte Cueva Shrine"
+                            src="/assets/photos/beaches/crescent_beach.jpg"
+                            alt="Crescent Beach Resort"
                             layout='intrinsic'
                             width={600}
                             height={350}
@@ -34,14 +34,14 @@ export default function MonteCuevaShrine() {
                     </div>
 
                     <div className="col-md-6">
-                        <h1 className='mb-1 fw-bold'>Monte Cueva Shrine</h1>
+                        <h1 className='mb-1 fw-bold'>Crescent Beach Resort</h1>
 
                         <p className="text-muted">
-                            <a href="https://www.google.com/maps/search/?api=1&query=Monte+Cueva+Shrine"
+                            <a href="https://www.google.com/maps/search/?api=1&query=Crescent+Beach+Resort"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-decoration-none text-muted">
-                                <i className="bi bi-geo-alt me-1"></i> Monte Cueva Shrine, Southern Leyte
+                                <i className="bi bi-geo-alt me-1"></i> Crescent Beach Resort, Southern Leyte
                             </a>
                         </p>
                         <div className="d-flex align-items-center">
@@ -82,8 +82,9 @@ export default function MonteCuevaShrine() {
                         </div>
 
                         <p className='mt-3'>
-                            Monte Cueva Shrine is a sacred pilgrimage site in Southern Leyte, nestled inside a cave with a breathtaking view.
-                            It is a place of prayer and meditation, offering a serene retreat for visitors seeking spiritual solace.
+                            Crescent Beach Resort is a hidden paradise in Southern Leyte, known for its pristine white sand,
+                            crystal-clear waters, and relaxing atmosphere. It offers a perfect escape for those looking to
+                            unwind and enjoy nature.
                         </p>
 
                         <div className="row align-items-center mt-2">

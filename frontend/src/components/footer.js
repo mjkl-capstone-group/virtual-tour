@@ -20,7 +20,7 @@ const Footer = () => {
                 <div className="row g-4">
                     {/* Project Info */}
                     <div className="col-md-3">
-                        <h4 style={{ fontSize: '1.2rem' }}>Southern Leyte Virtual Tours</h4>
+                        <h4 style={{ fontSize: '1.2rem' }}>PERIPLOS</h4>
                         <p style={{ fontSize: '0.9rem' }}>
                             Maasin City, Southern Leyte
                             <br />

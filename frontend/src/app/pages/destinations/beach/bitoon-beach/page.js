@@ -1,10 +1,12 @@
-import Header from "@/components/header"
-import Footer from "@/components/footer"
+import BitoonBeach from "./bitoonBeach";
 
-export default function BitoonBeach() {
-    <>
-        <Header />
-        <h1>BITOON BEACH</h1>
-        <Footer />
-    </>
+export const metadata = {
+    title: "Bitoon Beach | PERIPLOS",
+    description: "Bitoon Beach is a hidden gem in Southern Leyte, known for its pristine waters and serene environment, perfect for relaxation and adventure.",
 };
+
+export default function Page() {
+    return (
+        <BitoonBeach />
+    );
+}

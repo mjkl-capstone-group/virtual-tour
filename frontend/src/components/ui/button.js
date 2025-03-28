@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Button = () => {
     return (
         <button className="btn btn-dark">
@@ -6,11 +8,11 @@ const Button = () => {
     );
 };
 
-const DestinationsButton = () => {
+const DestinationsButton = ({ href }) => {
     return (
-        <button className="btn btn-dark" style={{ width: '200px' }}>
-            Virtual Tour
-        </button>
+        <Link href={href} legacyBehavior>
+            <a className="btn btn-dark" style={{ width: "200px" }}>Virtual Tour</a>
+        </Link>
     );
 };
 

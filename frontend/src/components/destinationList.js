@@ -22,7 +22,7 @@ const destinations = {
             location: "Silago",
             description: "A serene beach with powdery white sand, turquoise waters, and a peaceful ambiance, perfect for relaxation and nature lovers.",
             image: "/assets/photos/beaches/bitoon.jpg",
-            filepath: "/screens/beach/bitoon-beach",
+            filepath: "/pages/destinations/beach/bitoon-beach",
         },
         {
             name: "Molopolo White Beach",
@@ -31,6 +31,7 @@ const destinations = {
             description: "A beautiful white sand beach known for its crystal-clear waters and relaxing atmosphere.",
             activities: ["Swimming", "Snorkeling", "Picnic", "Beach Volleyball"],
             image: "/assets/photos/beaches/molopolo.jpg",
+            filepath: "/pages/destinations/beach/molopolo-white-beach",
         },
     ],
     heritage: [
@@ -40,6 +41,7 @@ const destinations = {
             location: "Maasin",
             description: "A pilgrimage site on a hill with a scenic view and a chapel inside a cave.",
             image: "/assets/photos/heritage/monte-cueva-shrine.jpg",
+            filepath: "/pages/destinations/heritage/monte-cueva-shrine",
         },
         {
             name: "Agas-Agas Bridge",
