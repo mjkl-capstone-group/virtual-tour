@@ -14,26 +14,34 @@ export default function AgasAgasBridge() {
     const [show, setShow] = useState(false);
     const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
     const location = 'FXWX+H5Q, Sogod, Southern Leyte';
+    const latitude = 10.496584;
+    const longitude = 124.998010;
 
     useEffect(() => {
         import("bootstrap/dist/js/bootstrap.min.js");
     }, []);
 
-    const toggleModal = () => {
+    const weatherModal = () => {
         setShow(!show);
     };
+
+    const getDirections = () => {
+        window.open(`https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`, '_blank');
+        console.log(`testing`);
+    }
 
     useEffect(() => {
         if (show) {
             setLoading(true);
             const fetchWeatherData = async () => {
                 try {
-                    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`);
+                    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=5&aqi=no&alerts=no`);
                     const data = await response.json();
+                    console.log(data);
                     setWeatherData(data);
                 } catch (error) {
                     console.error("Error fetching weather data:", error);
-                    setWeatherData(null); // Optional: set a fallback message or error state
+                    setWeatherData(null);
                 } finally {
                     setLoading(false);
                 }
@@ -56,7 +64,6 @@ export default function AgasAgasBridge() {
                         <Image
                             src="/assets/photos/heritage/agas-agas-bridge.jpg"
                             alt="Agas-Agas Bridge"
-                            layout='intrinsic'
                             width={600}
                             height={350}
                             className="img-fluid rounded"
@@ -88,13 +95,14 @@ export default function AgasAgasBridge() {
                         <div className="mb-2 mt-4">
                             <button className="btn btn-outline-dark me-2"
                                 style={{ width: '200px' }}
+                                onClick={getDirections}
                             >
                                 <i className="fa-solid fa-location-arrow me-2"></i>
                                 Get Directions
                             </button>
                             <button className="btn btn-outline-dark"
                                 style={{ width: '200px' }}
-                                onClick={toggleModal}
+                                onClick={weatherModal}
                             >
                                 <i className="fa-solid fa-cloud me-2"></i>
                                 {loading ? 'Loading...' : 'Check Weather'}
@@ -103,7 +111,9 @@ export default function AgasAgasBridge() {
 
                         {show && (
                             <div className="modal fade show"
-                                style={{ display: 'block' }}
+                                style={{
+                                    display: 'block',
+                                }}
                                 tabIndex="-1"
                                 aria-labelledby="exampleModalLabel"
                                 aria-hidden="true"
@@ -116,28 +126,27 @@ export default function AgasAgasBridge() {
                                             <h5 className="modal-title w-100" id="exampleModalLabel">
                                                 Weather Information
                                             </h5>
+                                            <button type="button" className="btn-close"
+                                                onClick={weatherModal}
+                                                aria-label="Close"
+                                            ></button>
                                         </div>
                                         <div className="modal-body">
                                             {weatherData ? (
-                                                <div className="mt-4">
-                                                    <h5>Current Weather</h5>
-                                                    <p><strong>Temperature:</strong> {weatherData.current.temp_c}°C</p>
-                                                    <p><strong>Condition:</strong> {weatherData.current.condition.text}</p>
-                                                    <img src={`https:${weatherData.current.condition.icon}`} alt={weatherData.current.condition.text} />
+                                                <div className="container">
+                                                    <div className="row flex-nowrap overflow-auto">
+                                                        {weatherData.forecast.forecastday.map((day, index) => (
+                                                            <div key={index} className="col-auto text-center">
+                                                                <p>{new Date(day.date).toLocaleDateString([], { weekday: 'short' })}</p>
+                                                                <img src={`https:${day.day.condition.icon}`} alt={day.day.condition.text} />
+                                                                <p>{day.day.avgtemp_c}°C</p>
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </div>
                                             ) : (
-                                                <p>No weather data available.</p>
+                                                <p>Loading weather data...</p>
                                             )}
-                                        </div>
-                                        <div className="modal-footer">
-                                            <button
-                                                type="button"
-                                                className="btn btn-secondary"
-                                                data-bs-dismiss="modal"
-                                                onClick={toggleModal}
-                                            >
-                                                Close
-                                            </button>
                                         </div>
                                     </div>
                                 </div>

@@ -23,7 +23,6 @@ export default function CrescentBeachResort() {
                         <Image
                             src="/assets/photos/beaches/crescent_beach.jpg"
                             alt="Crescent Beach Resort"
-                            layout='intrinsic'
                             width={600}
                             height={350}
                             className="img-fluid rounded"
@@ -68,15 +67,15 @@ export default function CrescentBeachResort() {
                         </div>
                         <div className="d-flex align-items-center gap-3">
                             <h6 className="mb-0">Socials:</h6>
-                            <Link href="#" className="text-decoration-none text-dark d-flex align-items-center">
+                            <Link href="" className="text-decoration-none text-dark d-flex align-items-center">
                                 <i className="fa-brands fa-facebook me-1 fs-5"></i> Facebook
                             </Link>
                             <div className="vr"></div>
-                            <Link href="#" className="text-decoration-none text-dark d-flex align-items-center">
+                            <Link href="" className="text-decoration-none text-dark d-flex align-items-center">
                                 <i className="fa-brands fa-twitter me-1 fs-5"></i> Twitter
                             </Link>
                             <div className="vr"></div>
-                            <Link href="#" className="text-decoration-none text-dark d-flex align-items-center">
+                            <Link href="" className="text-decoration-none text-dark d-flex align-items-center">
                                 <i className="fa-brands fa-whatsapp me-1 fs-5"></i> WhatsApp
                             </Link>
                         </div>
@@ -89,7 +88,7 @@ export default function CrescentBeachResort() {
 
                         <div className="row align-items-center mt-2">
                             <div className="col-auto mt-1">
-                                <DestinationsButton />
+                                <DestinationsButton href="" />
                             </div>
                             <div className="col-auto mt-1">
                                 <div className="dropdown">
@@ -99,9 +98,9 @@ export default function CrescentBeachResort() {
                                         <i className="fa-solid fa-share-nodes fs-5"></i>Share
                                     </button>
                                     <ul className="dropdown-menu">
-                                        <li><a className="dropdown-item" href="#"><i className="fa-brands fa-facebook me-2"></i>Facebook</a></li>
-                                        <li><a className="dropdown-item" href="#"><i className="fa-brands fa-twitter me-2"></i>Twitter</a></li>
-                                        <li><a className="dropdown-item" href="#"><i className="fa-brands fa-whatsapp me-2"></i>WhatsApp</a></li>
+                                        <li><a className="dropdown-item" href=""><i className="fa-brands fa-facebook me-2"></i>Facebook</a></li>
+                                        <li><a className="dropdown-item" href=""><i className="fa-brands fa-twitter me-2"></i>Twitter</a></li>
+                                        <li><a className="dropdown-item" href=""><i className="fa-brands fa-whatsapp me-2"></i>WhatsApp</a></li>
                                     </ul>
                                 </div>
                             </div>

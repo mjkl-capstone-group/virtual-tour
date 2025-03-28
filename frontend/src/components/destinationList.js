@@ -57,20 +57,23 @@ const destinations = {
             location: "Maasin",
             description: "A historic church with Spanish-era architecture, one of the oldest in Southern Leyte.",
             image: "/assets/photos/heritage/lady-assumption.jpg",
+            filepath: "/destination/heritage/our-lady-of-the-assumption",
         },
         {
-            name: "Maasin Cathedral",
+            name: "Maasin Cathedral-National Shrine & Parish of Our Lady of the Assumption",
             type: "Heritage",
             location: "Maasin",
             description: "A religious landmark featuring beautiful stained-glass windows and intricate carvings.",
             image: "/assets/photos/heritage/maasin-cathedral.jpg",
+            filepath: "/destination/heritage/maasin-cathedral",
         },
         {
-            name: "Santo Niño Church",
+            name: "Santo Niño de Malitbog Parish",
             type: "Heritage",
             location: "Malitbog",
             description: "An ancient church known for its historical significance and well-preserved structure.",
             image: "/assets/photos/heritage/santo-nino-church.jpg",
+            filepath: "/destination/heritage/santo-nino-church",
         },
     ],
     caves: [
@@ -87,6 +90,7 @@ const destinations = {
             location: "Macrohon",
             description: "A cave system with stalactites and stalagmites, located near Macrohon.",
             image: "/assets/photos/cave/cambaro-cave.jpg",
+            filepath: "/destination/cave/cambaro-cave",
         },
         {
             name: "Guinsuhotan Cave",
@@ -94,6 +98,7 @@ const destinations = {
             location: "Maasin",
             description: "A cave with stunning rock formations, underground streams, and a scenic waterfall at the entrance.",
             image: "/assets/photos/cave/guinsuhotan.jpg",
+            filepath: "/destination/cave/guinsuhotan-cave",
         },
     ],
     falls: [
@@ -103,6 +108,7 @@ const destinations = {
             location: "Maasin",
             description: "A serene waterfall surrounded by lush greenery, perfect for nature lovers.",
             image: "/assets/photos/falls/cagnituan-falls.jpg",
+            filepath: "/destination/falls/cagnituan-falls",
         },
         {
             name: "Magsuhot Park",
@@ -110,6 +116,7 @@ const destinations = {
             location: "Sogod",
             description: "A nature park with multiple cascading waterfalls and picnic areas.",
             image: "/assets/photos/falls/magsuhot-park.jpg",
+            filepath: "/destination/falls/magsuhot-park",
         },
         // {
         //     name: "Majayjay Falls",

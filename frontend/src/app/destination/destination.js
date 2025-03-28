@@ -145,7 +145,7 @@ export default function DestinationComponent() {
                 {/*Card*/}
                 <div className="row mt-4">
                     {filteredDestinations.map((destination, index) => (
-                        <div key={index} className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay={index * 100}>
+                        <div key={index} className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay={index * 10}>
                             <div className={`${styles["destination-card"]}`} onClick={() => router.push(destination.filepath)} style={{ cursor: "pointer" }}>
                                 <Image
                                     src={destination.image}

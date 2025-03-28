@@ -23,7 +23,6 @@ export default function MonteCuevaShrine() {
                         <Image
                             src="/assets/photos/heritage/monte-cueva-shrine.jpg"
                             alt="Monte Cueva Shrine"
-                            layout='intrinsic'
                             width={600}
                             height={350}
                             className="img-fluid rounded"
@@ -41,7 +40,7 @@ export default function MonteCuevaShrine() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-decoration-none text-muted">
-                                <i className="bi bi-geo-alt me-1"></i> Monte Cueva Shrine, Southern Leyte
+                                <i className="bi bi-geo-alt me-1"></i> 4RVR+8GJ, Maasin City, Southern Leyte
                             </a>
                         </p>
                         <div className="d-flex align-items-center">
@@ -88,7 +87,7 @@ export default function MonteCuevaShrine() {
 
                         <div className="row align-items-center mt-2">
                             <div className="col-auto mt-1">
-                                <DestinationsButton />
+                                <DestinationsButton href="" />
                             </div>
                             <div className="col-auto mt-1">
                                 <div className="dropdown">

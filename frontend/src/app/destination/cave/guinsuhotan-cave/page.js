@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 import { useEffect } from 'react';
 
-export default function MolopoloWhiteBeach() {
+export default function GuinsuhotanCave() {
 
     useEffect(() => {
         import("bootstrap/dist/js/bootstrap.min.js");
@@ -21,8 +21,8 @@ export default function MolopoloWhiteBeach() {
                 <div className="row align-items-center">
                     <div className="col-md-6">
                         <Image
-                            src="/assets/photos/beaches/molopolo.jpg"
-                            alt="Molopolo White Beach"
+                            src="/assets/photos/cave/guinsuhotan.jpg"
+                            alt="Guinsuhotan Cave"
                             width={600}
                             height={350}
                             className="img-fluid rounded"
@@ -33,14 +33,14 @@ export default function MolopoloWhiteBeach() {
                     </div>
 
                     <div className="col-md-6">
-                        <h1 className='mb-1 fw-bold'>Molopolo White Beach</h1>
+                        <h1 className='mb-1 fw-bold'>Guinsuhotan Cave</h1>
 
                         <p className="text-muted">
-                            <a href="https://www.google.com/maps/search/?api=1&query=Molopolo+White+Beach"
+                            <a href="https://www.google.com/maps/search/?api=1&query=Guinsuhotan+Cave,+Southern+Leyte"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-decoration-none text-muted">
-                                <i className="bi bi-geo-alt me-1"></i> Liloan, Southern Leyte
+                                <i className="bi bi-geo-alt me-1"></i> 5W76+M98, Maasin City, Southern Leyte
                             </a>
                         </p>
                         <div className="d-flex align-items-center">
@@ -81,8 +81,7 @@ export default function MolopoloWhiteBeach() {
                         </div>
 
                         <p className='mt-3'>
-                            Molopolo White Beach is a stunning getaway in Southern Leyte, featuring powdery white sand,
-                            crystal-clear waters, and a serene atmosphere. A perfect destination for relaxation and nature lovers.
+                            Guinsuhotan Cave in Maasin City, Southern Leyte is a limestone cave with stunning rock formations, underground streams, and rich biodiversity.
                         </p>
 
                         <div className="row align-items-center mt-2">

@@ -23,7 +23,6 @@ export default function BitoonBeach() {
                         <Image
                             src="/assets/photos/beaches/bitoon.jpg"
                             alt="Bitoon Beach"
-                            layout='intrinsic'
                             width={600}
                             height={350}
                             className="img-fluid rounded"
@@ -87,7 +86,7 @@ export default function BitoonBeach() {
 
                         <div className="row align-items-center mt-2">
                             <div className="col-auto mt-1">
-                                <DestinationsButton />
+                                <DestinationsButton href="" />
                             </div>
                             <div className="col-auto mt-1">
                                 <div className="dropdown">
