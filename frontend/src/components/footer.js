@@ -15,7 +15,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-dark text-white py-5" style={{ minHeight: '300px' }}>
+        <footer className="bg text-white py-5" style={{ backgroundColor: 'var(--primary-color)' }}>
             <div className="container">
                 <div className="row g-4">
                     {/* Project Info */}

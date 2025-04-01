@@ -11,7 +11,7 @@ const Header = () => {
     }, []);
 
     return (
-        <nav className="navbar navbar-expand-md sticky-top py-2">
+        <nav className="navbar navbar-expand-md sticky-top py-2 bg-dark">
             <div className="container">
                 {/* Logo */}
                 <Link className="navbar-brand fw-bold"
@@ -70,7 +70,7 @@ const Header = () => {
 
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item mt-1">
-                            <Link className="nav-link" href="/test-page/screen-testing" title="Discover">
+                            <Link className="nav-link" href="/test-page/slider" title="Discover">
                                 <i className="fa-regular fa-compass fa-lg"></i>
                             </Link>
                         </li>

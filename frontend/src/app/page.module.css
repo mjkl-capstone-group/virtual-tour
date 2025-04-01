@@ -1,6 +1,7 @@
 .feature-icon {
   font-size: 3rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
 .destination-card {
@@ -9,20 +10,6 @@
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.nav-pills :global(.nav-link) {
-  color: black !important;
-}
-
-.nav-pills :global(.nav-link.active) {
-  background-color: black !important;
-  color: white !important;
-}
-
-.nav-pills :global(.nav-link:hover) {
-  border: 1px solid black !important;
-}
-
 
 /* .leyte-bg-pattern {
   background-image: radial-gradient(var(--secondary-color) 1px, transparent 1px);
@@ -45,4 +32,45 @@
   width: 60px;
   height: 3px;
   background: var(--secondary-color);
+}
+
+.cardHover {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardHover h5 {
+  position: absolute;
+  bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  transform: translateY(10px);
+}
+
+.cardHover:hover h5 {
+  opacity: 1;
+  z-index: 1;
+}
+
+.cardHover::after {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  transition: bottom 0.4s ease-in-out;
+}
+
+.cardHover:hover::after {
+  bottom: 0;
 }

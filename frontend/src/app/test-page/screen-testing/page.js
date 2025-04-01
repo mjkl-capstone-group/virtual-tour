@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import Button from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 
 import { useEffect } from 'react';
 
