@@ -59,12 +59,13 @@ export default function TangkaanBeach() {
                         <Image
                             src="/assets/photos/beaches/tangkaan.jpg"
                             alt="Tangkaan Beach"
-                            layout='intrinsic'
                             width={600}
-                            height={350}
-                            className="img-fluid rounded"
+                            height={400}
+                            className="img-fluid w-100 rounded"
                             style={{
                                 boxShadow: "0 0 5px 0 rgba(0, 0, 0, 0.5)",
+                                objectFit: "cover",
+                                height: "400px",
                             }}
                         />
                     </div>

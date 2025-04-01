@@ -10,7 +10,6 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero"
 import Link from "next/link";
-import { Button, DestinationsButton } from "@/components/ui/button";
 import FixedButton from "@/components/ui/nereofinBtn";
 
 export default function Home() {
@@ -19,10 +18,6 @@ export default function Home() {
   }, []);
 
   const router = useRouter();
-
-  const navigateTo = (path) => {
-    router.push(path);
-  };
 
   useEffect(() => {
     AOS.init({
@@ -38,7 +33,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="hero-section" data-aos="fade-up">
+      <section className="hero-section">
         <Hero />
       </section >
 
