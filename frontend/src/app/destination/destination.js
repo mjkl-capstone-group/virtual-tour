@@ -145,23 +145,27 @@ export default function DestinationComponent() {
                 {/*Card*/}
                 <div className="row mt-4">
                     {filteredDestinations.map((destination, index) => (
-                        <div key={index} className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay={index * 10}>
-                            <div className={`${styles["destination-card"]}`} onClick={() => router.push(destination.filepath)} style={{ cursor: "pointer" }}>
+                        <div key={index} className="col-md-4 mb-4 d-flex">
+                            <div className={`${styles["destination-card"]} d-flex flex-column h-100 w-100`}
+                                onClick={() => router.push(destination.filepath)}
+                                style={{ cursor: "pointer" }}>
                                 <Image
                                     src={destination.image}
                                     width={600}
                                     height={400}
-                                    className="img-fluid"
+                                    className="img-fluid w-100"
                                     alt={destination.name}
-                                    style={{ objectFit: "cover", height: "200px", width: "100%" }}
+                                    style={{ objectFit: "cover", height: "200px" }}
                                 />
-                                <div className="p-4 bg-white shadow-sm rounded border">
+                                <div className="p-4 bg-white shadow-sm rounded border flex-grow-1">
                                     <h4 className="fw-semibold mb-2">{destination.name}</h4>
                                     <p className="text-muted small mb-2">
                                         <i className="bi bi-geo-alt-fill me-1"></i> {destination.location}
                                     </p>
                                     <p className="text-secondary mb-3">{destination.description}</p>
-                                    <span className={`badge absolute rounded-pill px-3 py-2 ${styles.badgeTitle}`} >{destination.type}</span>
+                                    <span className={`badge rounded-pill px-3 py-2 ${styles.badgeTitle}`}>
+                                        {destination.type}
+                                    </span>
                                 </div>
                             </div>
                         </div>

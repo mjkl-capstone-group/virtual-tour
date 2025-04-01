@@ -9,8 +9,9 @@ import { useRouter } from "next/navigation";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero"
-import { Button, DestinationsButton } from "@/components/ui/button";
 import Link from "next/link";
+import { Button, DestinationsButton } from "@/components/ui/button";
+import FixedButton from "@/components/ui/nereofinBtn";
 
 export default function Home() {
   useEffect(() => {
@@ -49,7 +50,7 @@ export default function Home() {
               <div className="accent-bar mb-3" style={{ color: '#1a446c', fontWeight: 'bold', fontSize: '18px' }}>
                 <span>How to Use the Virtual Tour</span>
               </div>
-              <h3 className="fw-bold">Embark on a Journey with Our Virtual Tours</h3>
+              <h2 className="fw-bold">Embark on a Journey with Our Virtual Tours</h2>
               <p className="mb-4">Follow these simple steps to explore Southern Leyte’s stunning locations from the comfort of your home.</p>
               <div className="row">
                 <div className="col-6">
@@ -153,8 +154,10 @@ export default function Home() {
               </div>
 
               <div className="col-md-4 d-flex flex-column justify-content-center p-4">
-                <span className="text-uppercase text-primary fw-bold">Explore Our Featured Destinations</span>
-                <h2 className="fw-bold mt-2">Discover Breathtaking Locations</h2>
+                <div className="accent-bar mb-3" style={{ color: '#1a446c', fontWeight: 'bold', fontSize: '18px' }}>
+                  <span>Explore Our Featured Destinations</span>
+                </div>
+                <h2 className="fw-bold">Discover Breathtaking Locations</h2>
                 <p className="text-muted mt-3">
                   Immerse yourself in stunning landscapes and unique experiences. Start your journey to unforgettable destinations today.
                 </p>
@@ -279,6 +282,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <FixedButton />
 
       <div data-aos="fade-up" data-aos-delay='10'>
         < Footer />
