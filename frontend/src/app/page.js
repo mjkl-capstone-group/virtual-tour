@@ -43,18 +43,18 @@ export default function Home() {
       </section >
 
       {/* How to Use the Virtual Tour Section */}
-      <section className="py-5 bg-light" data-aos="fade-up">
+      <section className="py-5 bg-light">
         <div className="container py-5">
           <div className="row">
-            <div className="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div className="col-md-6">
               <div className="accent-bar mb-3" style={{ color: '#1a446c', fontWeight: 'bold', fontSize: '18px' }}>
-                <span>How to Use the Virtual Tour</span>
+                <span data-aos="fade-right">How to Use the Virtual Tour</span>
               </div>
-              <h2 className="fw-bold">Embark on a Journey with Our Virtual Tours</h2>
-              <p className="mb-4">Follow these simple steps to explore Southern Leyte’s stunning locations from the comfort of your home.</p>
+              <h2 className="fw-bold" data-aos="fade-right">Embark on a Journey with Our Virtual Tours</h2>
+              <p className="mb-4" data-aos="fade-right">Follow these simple steps to explore Southern Leyte’s stunning locations from the comfort of your home.</p>
               <div className="row">
                 <div className="col-6">
-                  <div className="card bg-transparent border-0">
+                  <div className="card bg-transparent border-0" data-aos="fade-up">
                     <div className="card-body">
                       <i className="fas fa-vr-cardboard fa-2x mb-3"></i>
                       <h5 className="card-title">Enter Virtual Tour</h5>
@@ -63,7 +63,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="col-6">
-                  <div className="card bg-transparent border-0">
+                  <div className="card bg-transparent border-0" data-aos="fade-up">
                     <div className="card-body">
                       <i className="fas fa-mouse-pointer fa-2x mb-3"></i>
                       <h5 className="card-title">Navigate</h5>
@@ -74,7 +74,7 @@ export default function Home() {
               </div>
               <div className="row mt-3">
                 <div className="col-6">
-                  <div className="card bg-transparent border-0">
+                  <div className="card bg-transparent border-0" data-aos="fade-up">
                     <div className="card-body">
                       <i className="fas fa-search-plus fa-2x mb-3"></i>
                       <h5 className="card-title">Zoom</h5>
@@ -83,7 +83,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="col-6">
-                  <div className="card bg-transparent border-0">
+                  <div className="card bg-transparent border-0" data-aos="fade-up">
                     <div className="card-body">
                       <i className="fas fa-map-marker-alt fa-2x mb-3"></i>
                       <h5 className="card-title">Hotspots</h5>
@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+            <div className="col-md-6 d-flex align-items-center" data-aos="fade-up-left" data-aos-delay="50">
               <Image
                 src="/assets/photos/others/virtualtour.gif"
                 alt="Virtual Tour Tutorial"
@@ -122,6 +122,8 @@ export default function Home() {
                     backgroundPosition: "center",
                     width: "50vh",
                   }}
+                  data-aos="fade-right"
+                  data-aos-delay="450"
                 >
                   <h5 className="fw-bold">Tangkaan Beach</h5>
                 </div>
@@ -135,6 +137,8 @@ export default function Home() {
                     backgroundPosition: "center",
                     width: "50vh",
                   }}
+                  data-aos="fade-right"
+                  data-aos-delay="300"
                 >
                   <h5 className="fw-bold">Agas-agas Bridge</h5>
                 </div>
@@ -148,12 +152,14 @@ export default function Home() {
                     backgroundPosition: "center",
                     width: "50vh",
                   }}
+                  data-aos="fade-right"
+                  data-aos-delay="150"
                 >
                   <h5 className="fw-bold">Limasawa Island</h5>
                 </div>
               </div>
 
-              <div className="col-md-4 d-flex flex-column justify-content-center p-4">
+              <div className="col-md-4 d-flex flex-column justify-content-center p-4" data-aos="fade-left">
                 <div className="accent-bar mb-3" style={{ color: '#1a446c', fontWeight: 'bold', fontSize: '18px' }}>
                   <span>Explore Our Featured Destinations</span>
                 </div>
@@ -177,7 +183,7 @@ export default function Home() {
             <strong> Why Choose Us </strong>
           </h2>
           <div className="row g-4 text-center mt-1 d-flex flex-wrap justify-content-center">
-            <div className="col-4 col-sm-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div className="col-4 col-sm-4 col-md-4" data-aos="fade-up-right" data-aos-delay="100">
               <i className={`fas fa-map-marked-alt mb-3 bg p-3 rounded-4 ${styles["feature-icon"]}`}></i>
               <h4>Local Expertise</h4>
               <p>Guided by Southern Leyte natives with deep cultural knowledge</p>
@@ -189,14 +195,14 @@ export default function Home() {
               <p>Immersive virtual tours of our province's best spots</p>
             </div>
 
-            <div className="col-4 col-sm-4 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div className="col-4 col-sm-4 col-md-4" data-aos="fade-up-left" data-aos-delay="300">
               <i className={`fas fa-fish mb-3 bg p-3 rounded-4 ${styles["feature-icon"]}`}></i>
               <h4>Marine Conservation</h4>
               <p>Supporting local conservation efforts</p>
             </div>
           </div>
 
-          <div className="row justify-content-center mt-5">
+          <div className="row justify-content-center mt-5" data-aos="fade-up">
             <div className="col-12 col-sm-12 col-md-12 col-lg-12">
               <div className="card shadow-sm border-0 rounded-3 d-flex flex-row"
                 style={{ backgroundColor: 'var(--primary-color)' }}
