@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import PannellumViewer from "@/components/pannellumViewer";
 import assetsURL from "@/utils/supabaseAssets";
 
@@ -6,9 +7,8 @@ export const metadata = {
     description: "Explore the beauty of Tangkaan Beach in Southern Leyte through this virtual tour.",
 };
 
-export default async function TangkaanBeachVR() {
-
-    const initialScenes = {
+export default function TangkaanBeachVR() {
+    const initialScenes = useMemo(() => ({
         scene1: {
             panorama: "/assets/panoramas/tangkaan-beach/entrance_outside.jpg",
             nextScene: "scene2",
@@ -77,7 +77,9 @@ export default async function TangkaanBeachVR() {
             initialYaw: 4,
             initialPitch: -3,
         },
-    };
+    }), []);
 
-    return <PannellumViewer initialScenes={initialScenes} />;
+    return (
+        <PannellumViewer initialScenes={initialScenes} />
+    );
 }

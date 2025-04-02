@@ -156,7 +156,7 @@ export default function Home() {
 
               <div className="col-md-4 d-flex flex-column justify-content-center p-4" data-aos="fade-left">
                 <div className="accent-bar mb-3" style={{ color: '#1a446c', fontWeight: 'bold', fontSize: '18px' }}>
-                  <span>Explore Our Featured Destinations</span>
+                  <span>Explore Unforgettable Gateways</span>
                 </div>
                 <h2 className="fw-bold">Discover Breathtaking Locations</h2>
                 <p className="text-muted mt-3">
