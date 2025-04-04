@@ -80,6 +80,8 @@ export default function TangkaanBeachVR() {
     }), []);
 
     return (
-        <PannellumViewer initialScenes={initialScenes} />
+        <>
+            <PannellumViewer initialScenes={initialScenes} />
+        </>
     );
 }

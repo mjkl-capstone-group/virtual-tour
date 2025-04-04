@@ -31,12 +31,20 @@ function ControlledCarousel() {
 
     return (
         <>
-            <Carousel activeIndex={index} onSelect={handleSelect} interval={3000}>
+            <Carousel
+                activeIndex={index}
+                onSelect={handleSelect}
+                interval={3000}
+                prevIcon={<span className="bi bi-chevron-compact-left fs-1" />}
+                nextIcon={<span className='bi bi-chevron-compact-right fs-1' />}
+                touch={true}
+            >
                 {slides.map((slide, idx) => (
                     <Carousel.Item key={idx}>
                         <img className="carousel-image" src={slide.image} alt={slide.title} />
+                        <div className="image-overlay"></div>
                         <Carousel.Caption className="mb-3">
-                            <h3>{slide.title}</h3>
+                            <h3 className='fw-bold'>{slide.title}</h3>
                             <p>{slide.caption}</p>
                         </Carousel.Caption>
                     </Carousel.Item>
