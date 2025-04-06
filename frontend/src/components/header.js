@@ -1,19 +1,45 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import assetsURL from "@/utils/supabase-assets";
 import Link from 'next/link';
+import supabase from '@/lib/supabase-client'
+import { useRouter } from "next/navigation";
+
+// import assetsURL from "@/utils/supabase-assets";
 
 const Header = () => {
+    const router = useRouter()
+
     useEffect(() => {
         import("bootstrap/dist/js/bootstrap.min.js");
     }, []);
 
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+
+    useEffect(() => {
+        const checkSession = async () => {
+            const { data } = await supabase.auth.getSession()
+            const session = data?.session
+
+            if (session?.user) {
+                setIsLoggedIn(true)
+            }
+        }
+
+        checkSession()
+    }, [])
+
+    const handleLogout = async () => {
+        await supabase.auth.signOut()
+        router.push('/')
+        window.location.reload();
+    }
+
     return (
         <nav className="navbar navbar-expand-md sticky-top py-2 bg-dark">
             <div className="container">
-                {/* Logo */}
                 <Link className="navbar-brand fw-bold"
                     href="/"
                     style={{ color: 'var(--primary-color)' }}
@@ -45,7 +71,7 @@ const Header = () => {
                         <li className="nav-item mt-1">
                             <Link className="nav-link"
                                 href="/"
-                                style={{ color: 'black'}}
+                                style={{ color: 'black' }}
                             >
                                 Home
                             </Link>
@@ -53,7 +79,7 @@ const Header = () => {
                         <li className="nav-item mt-1">
                             <Link className="nav-link"
                                 href="/destination"
-                                style={{ color: 'black'}}
+                                style={{ color: 'black' }}
                             >
                                 Destination
                             </Link>
@@ -61,7 +87,7 @@ const Header = () => {
                         <li className="nav-item mt-1">
                             <Link className="nav-link"
                                 href="/forums"
-                                style={{ color: 'black'}}
+                                style={{ color: 'black' }}
                             >
                                 Forums
                             </Link>
@@ -85,34 +111,39 @@ const Header = () => {
                             <span className="border-start border-2 h-50"></span>
                         </li>
 
-                        <li className="nav-item dropdown">
-                            <a className="nav-link d-flex align-items-center" id="userDropdown" role="button" data-bs-toggle="dropdown" style={{ cursor: 'pointer' }}>
-                                <Image src="/assets/groupmates/romawak.jpg" width={35} height={35} className="rounded-circle user-profile" alt="User Profile" />
-                            </a>
-                            <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                <li>
-                                    <Link className="dropdown-item" href="/signin" style={{ cursor: 'pointer' }}>
-                                        <i className="fa-solid fa-user me-2"></i> Profile
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className="dropdown-item" href="/settings" style={{ cursor: 'pointer' }}>
-                                        <i className="fa-solid fa-gear me-2"></i> Settings
-                                    </Link>
-                                </li>
-                                <hr className="my-1" />
-                                <li>
-                                    <a className="dropdown-item text-danger" href="/signup" style={{ cursor: 'pointer' }}>
-                                        <i className="fa-solid fa-right-from-bracket me-2"></i> Logout
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                        {isLoggedIn ? (
+                            <li className="nav-item dropdown">
+                                <a className="nav-link d-flex align-items-center" id="userDropdown" role="button" data-bs-toggle="dropdown" style={{ cursor: 'pointer' }}>
+                                    <Image src="/assets/images/profile.png" width={35} height={35} className="rounded-circle user-profile" alt="User Profile" />
+                                </a>
+                                <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li>
+                                        <Link className="dropdown-item" href="/profile" style={{ cursor: 'pointer' }}>
+                                            <i className="fa-solid fa-user me-2"></i> Profile
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" href="/settings" style={{ cursor: 'pointer' }}>
+                                            <i className="fa-solid fa-gear me-2"></i> Settings
+                                        </Link>
+                                    </li>
+                                    <hr className="my-1" />
+                                    <li>
+                                        <a className="dropdown-item text-danger" onClick={handleLogout} style={{ cursor: 'pointer' }}>
+                                            <i className="fa-solid fa-right-from-bracket me-2"></i> Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        ) : (
+                            <Link className="btn btn-dark p-2" href="/signin">
+                                Sign in
+                            </Link>
+                        )}
                     </ul>
-
                 </div>
             </div>
-        </nav>
+        </nav >
     );
 };
 

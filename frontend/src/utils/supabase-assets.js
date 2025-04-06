@@ -6,5 +6,3 @@ const assetsURL = {
 };
 
 export default assetsURL;
-
-

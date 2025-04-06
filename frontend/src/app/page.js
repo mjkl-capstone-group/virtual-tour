@@ -218,7 +218,8 @@ export default function Home() {
                     className="card-img-top mh-100"
                     alt="Explore Southern Leyte"
                     fill={true}
-                    style={{ objectFit: "cover" }}
+                    sizes="500px"
+                    style={{ objectFit: "cover"}}
                   />
                 </div>
               </div>

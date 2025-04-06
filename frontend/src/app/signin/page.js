@@ -4,6 +4,7 @@ import { useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -49,13 +50,16 @@ export default function Login() {
             <div className="row h-100">
                 <div className="col-md-6 d-none d-md-block position-relative p-0">
                     <div className="position-absolute" style={{ zIndex: 1, top: "30px", left: "30px" }}>
-                        <Image
-                            src="/assets/logos/leytexplore.jpg"
-                            width={30}
-                            height={30}
-                            alt="Leyte Explore"
-                        />
-                        <span className="fw-bold text-white ms-2">PERIPLOS</span>
+                        <Link href="/" className='text-decoration-none'>
+                            <Image
+                                src="/assets/logos/leytexplore.jpg"
+                                width={40}
+                                height={40}
+                                alt="Leyte Explore"
+                                className='mb-2'
+                            />
+                            <span className="fw-bold text-white ms-2 fs-4">PERIPLOS</span>
+                        </Link>
                     </div>
 
                     <Image

@@ -15,7 +15,8 @@ const slides = [
         caption: "From scenic spots to thrilling experiences, explore the best of Southern Leyte."
     },
     {
-        image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+        // image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+        image: "/assets/photos/agas-card.jpg",
         title: "Southern Leyte's Hidden Paradise",
         caption: "Discover the untouched beauty of Southern Leyte, from its serene beaches to vibrant marine life."
     }

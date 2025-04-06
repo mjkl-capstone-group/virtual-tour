@@ -4,7 +4,7 @@ const FixedButton = () => {
     return (
         <button className="fixed-button d-flex align-items-center justify-content-center" onClick={() => alert("Para po 2 sa AI!")}>
             <Image
-                src="/assets/photos/others/nerofin.png"
+                src="/assets/photos/nerofin.png"
                 width={100}
                 height={100}
                 alt="nerofinAI"

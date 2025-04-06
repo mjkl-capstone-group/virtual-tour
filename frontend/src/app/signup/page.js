@@ -4,6 +4,7 @@ import { useState } from 'react'
 import supabase from '@/lib/supabase-client'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Register() {
     const [formData, setFormData] = useState({
@@ -25,7 +26,9 @@ export default function Register() {
         }))
     }
 
-    const handleRegister = async () => {
+    const handleRegister = async (e) => {
+        e.preventDefault();
+
         const { email, password, first_name, middle_name, last_name, user_name } = formData
 
         const { data, error } = await supabase.auth.signUp({
@@ -43,7 +46,7 @@ export default function Register() {
             const { error: profileError } = await supabase
                 .from('profiles')
                 .insert([{
-                    id: user.id,
+                    visitor_id: user.id,
                     email,
                     first_name,
                     middle_name,
@@ -54,8 +57,8 @@ export default function Register() {
             if (profileError) {
                 console.error('Error inserting profile:', profileError)
             } else {
-                alert('Check your email for the confirmation link.')
-                router.push('/login')
+                alert('Successfully registered account')
+                router.push('/signin')
             }
         }
     }
@@ -65,13 +68,16 @@ export default function Register() {
             <div className="row h-100">
                 <div className="col-md-6 d-none d-md-block position-relative p-0">
                     <div className="position-absolute" style={{ zIndex: 1, top: "30px", left: "30px" }}>
-                        <Image
-                            src="/assets/logos/leytexplore.jpg"
-                            width={30}
-                            height={30}
-                            alt="Leyte Explore"
-                        />
-                        <span className="fw-bold text-white ms-2">PERIPLOS</span>
+                        <Link href="/" className='text-decoration-none'>
+                            <Image
+                                src="/assets/logos/leytexplore.jpg"
+                                width={40}
+                                height={40}
+                                alt="Leyte Explore"
+                                className='mb-2'
+                            />
+                            <span className="fw-bold text-white ms-2 fs-4">PERIPLOS</span>
+                        </Link>
                     </div>
 
                     <Image
@@ -93,12 +99,13 @@ export default function Register() {
                 <div className="col-md-6 d-flex align-items-center justify-content-center">
                     <div className="container px-5">
                         <h1 className="mb-5 text-center fw-bold fs-4">SIGN UP</h1>
-                        <form className="w-100">
+                        <form className="w-100" onSubmit={handleRegister}>
                             <h4 className="mb-3 fs-6">Personal Information</h4>
                             <div className="row mb-4">
                                 <div className="col-md-4 mb-3">
                                     <input
                                         type="text"
+                                        pattern="^[A-Za-z]+(\s[A-Za-z]+)*$"
                                         name="first_name"
                                         placeholder="First Name"
                                         value={formData.first_name}
@@ -120,6 +127,7 @@ export default function Register() {
                                 <div className="col-md-4 mb-3">
                                     <input
                                         type="text"
+                                        pattern="^[A-Za-z]+(\s[A-Za-z]+)*$"
                                         name="last_name"
                                         placeholder="Last Name"
                                         value={formData.last_name}
@@ -134,6 +142,7 @@ export default function Register() {
                             <div className="mb-3">
                                 <input
                                     type="text"
+                                    pattern="^[A-Za-z0-9]+$"
                                     name="user_name"
                                     placeholder="Username"
                                     value={formData.user_name}
@@ -156,6 +165,7 @@ export default function Register() {
                             <div className="mb-3">
                                 <input
                                     type="password"
+                                    pattern="^(?!\s*$).+"
                                     name="password"
                                     placeholder="Password"
                                     value={formData.password}
@@ -177,7 +187,7 @@ export default function Register() {
                             </div>
 
                             <div className="d-flex justify-content-center mt-4">
-                                <button onClick={handleRegister} className="btn btn-primary w-50">Sign Up</button>
+                                <button type='submit' className="btn btn-primary w-50">Sign Up</button>
                             </div>
                         </form>
 

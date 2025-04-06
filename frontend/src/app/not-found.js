@@ -12,7 +12,7 @@ export default function NotFound() {
             <h1 className="display-1 fw-bold mb-0">404</h1>
             <Image
                 className='mt-0'
-                src="/assets/photos/others/giphy.gif"
+                src="/assets/photos/giphy.gif"
                 alt="404 error GIF"
                 unoptimized
                 width={150}
