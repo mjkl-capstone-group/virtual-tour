@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import Image from "next/image";
-import assetsURL from "@/utils/supabaseAssets";
+import assetsURL from "@/utils/supabase-assets";
 import Link from 'next/link';
 
 const Header = () => {
@@ -91,7 +91,7 @@ const Header = () => {
                             </a>
                             <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                 <li>
-                                    <Link className="dropdown-item" href="/screens/tangkaan-beach" style={{ cursor: 'pointer' }}>
+                                    <Link className="dropdown-item" href="/signin" style={{ cursor: 'pointer' }}>
                                         <i className="fa-solid fa-user me-2"></i> Profile
                                     </Link>
                                 </li>
@@ -102,7 +102,7 @@ const Header = () => {
                                 </li>
                                 <hr className="my-1" />
                                 <li>
-                                    <a className="dropdown-item text-danger" onClick={() => alert('fuck you f bitch tnginamo')} style={{ cursor: 'pointer' }}>
+                                    <a className="dropdown-item text-danger" href="/signup" style={{ cursor: 'pointer' }}>
                                         <i className="fa-solid fa-right-from-bracket me-2"></i> Logout
                                     </a>
                                 </li>

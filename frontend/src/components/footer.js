@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import assetsURL from '@/utils/supabaseAssets';
+import assetsURL from '@/utils/supabase-assets';
 
 import { useRouter } from 'next/navigation';
 
@@ -70,7 +70,7 @@ const Footer = () => {
                         <h4 style={{ fontSize: '1.2rem' }}>Quick Links</h4>
                         <ul className="list-unstyled" style={{ fontSize: '0.9rem' }}>
                             <li>
-                                <a className="text-white" onClick={() => navigateTo('/about')} style={{ cursor: 'pointer' }}>About Us</a>
+                                <a className="text-white" onClick={() => navigateTo('/aboutus')} style={{ cursor: 'pointer' }}>About Us</a>
                             </li>
                             <li><a href="/faq" className="text-white">FAQ</a></li>
                             <li><a href="/privacy-policy" className="text-white">Privacy Policy</a></li>

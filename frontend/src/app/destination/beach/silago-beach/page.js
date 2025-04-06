@@ -1,5 +1,5 @@
 import PannellumViewer from "@/components/pannellumViewer";
-import assetsURL from "@/utils/supabaseAssets";
+import assetsURL from "@/utils/supabase-assets";
 
 export const metadata = {
     title: "Sogod Bay VR",

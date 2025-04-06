@@ -17,7 +17,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "next": "15.1.7",
+    "next": "^15.2.4",
     "pannellum": "^2.5.6",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",

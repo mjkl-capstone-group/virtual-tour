@@ -4,8 +4,8 @@ import Image from 'next/image';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { DestinationsButton } from '@/components/ui/button';
+import assetsURL from '@/utils/supabase-assets';
 import Link from 'next/link';
-
 import { useState, useEffect } from 'react';
 
 export default function TangkaanBeach() {
@@ -57,7 +57,7 @@ export default function TangkaanBeach() {
                 <div className="row align-items-center">
                     <div className="col-md-6">
                         <Image
-                            src="/assets/photos/beaches/tangkaan.jpg"
+                            src={`${assetsURL.images}/beach/tangkaan.jpg`}
                             alt="Tangkaan Beach"
                             width={600}
                             height={400}

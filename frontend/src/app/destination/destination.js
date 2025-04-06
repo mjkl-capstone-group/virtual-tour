@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import destinationsData from "@/components/destinationList";
+import destinationsData from "@/components/destination-list";
 import styles from "./destination.module.css";
 
 export default function DestinationComponent() {
@@ -44,16 +44,6 @@ export default function DestinationComponent() {
         );
     };
 
-    // Remove selected category filter
-    const removeFilter = (filter) => {
-        setSelectedFilters((prevFilters) => prevFilters.filter((f) => f !== filter));
-    };
-
-    // Remove selected location filter
-    const removeLocationFilter = (location) => {
-        setLocationFilters((prevLocations) => prevLocations.filter((loc) => loc !== location));
-    };
-
     // Get category and location data from destinations
     const categories = Object.keys(destinationsData);
     const locations = [...new Set(categories.flatMap((category) => destinationsData[category].map((dest) => dest.location)))];
@@ -80,7 +70,6 @@ export default function DestinationComponent() {
                     <strong>Destinations</strong>
                 </h2>
 
-                {/* Search input and filter toggle button */}
                 <div className="mb-3 d-flex align-items-center position-relative mt-5" style={{ maxWidth: "450px" }}>
                     <i className="fa-solid fa-magnifying-glass position-absolute start-0 ps-3 text-muted"></i>
                     <input
@@ -105,7 +94,6 @@ export default function DestinationComponent() {
                     </button>
                 </div>
 
-                {/* Filter dropdown panel */}
                 {showFilters && (
                     <div
                         className="mb-4 p-3 border rounded position-absolute bg-white shadow-lg"

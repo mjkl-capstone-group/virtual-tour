@@ -90,7 +90,7 @@ export default function Home() {
             </div>
             <div className="col-md-6 d-flex align-items-center" data-aos="fade-up-left" data-aos-delay="50">
               <Image
-                src="/assets/photos/others/virtualtour.gif"
+                src="/assets/photos/virtualtour.gif"
                 alt="Virtual Tour Tutorial"
                 className="img-fluid w-100 h-75 my-auto object-fit-contain"
                 width={500}
@@ -112,7 +112,7 @@ export default function Home() {
                   className={`card p-4 shadow-lg border-0 rounded-3 text-center flex-fill mt-3 ${styles.cardHover}`}
                   style={{
                     height: "300px",
-                    backgroundImage: "url('/assets/photos/others/tangkaan-card.jpg')",
+                    backgroundImage: "url('/assets/photos/tangkaan-card.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     width: "50vh",
@@ -127,7 +127,7 @@ export default function Home() {
                   className={`card p-4 shadow-lg border-0 rounded-3 text-center flex-fill ${styles.cardHover}`}
                   style={{
                     height: "350px",
-                    backgroundImage: "url('/assets/photos/others/agas-card.jpg')",
+                    backgroundImage: "url('/assets/photos/agas-card.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     width: "50vh",
@@ -142,7 +142,7 @@ export default function Home() {
                   className={`card p-4 shadow-lg border-0 rounded-3 text-center flex-fill mt-3 ${styles.cardHover}`}
                   style={{
                     height: "300px",
-                    backgroundImage: "url('/assets/photos/others/limasawa-card.jpg')",
+                    backgroundImage: "url('/assets/photos/limasawa-card.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     width: "50vh",
@@ -214,7 +214,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="w-50 position-relative">
-                  <Image src="/assets/photos/others/choose.jpg"
+                  <Image src="/assets/photos/choose.jpg"
                     className="card-img-top mh-100"
                     alt="Explore Southern Leyte"
                     fill={true}
@@ -225,62 +225,6 @@ export default function Home() {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* Community Section */}
-      <section className="py-5" id="community" data-aos="fade-up">
-        <div className="container py-5 text-center">
-          <h2 className={`${styles["section-title"]} mb-3`} data-aos="fade-up">
-            <strong>Join the Discussion in Our Forums</strong>
-          </h2>
-          <p className="text-muted mb-5" data-aos="fade-up">
-            Engage with fellow travelers, explorers, and locals who share a passion for Southern Leyte.
-          </p>
-
-          <div className="row g-4 mt-1 d-flex flex-wrap text-center justify-content-center">
-            <div className="col-4 col-sm-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <h4 className="fw-semibold">Share Your Experience</h4>
-              <p className="text-muted">Upload your own travel stories and tips to inspire others.</p>
-            </div>
-            <div className="col-4 col-sm-4 col-md-4" data-aos="fade-up" data-aos-delay="200">
-              <h4 className="fw-semibold">Rate and Recommend</h4>
-              <p className="text-muted">Help others find the best places by rating and reviewing destinations.</p>
-            </div>
-            <div className="col-4 col-sm-4 col-md-4" data-aos="fade-up" data-aos-delay="300">
-              <h4 className="fw-semibold">Connect with Fellow Travelers</h4>
-              <p className="text-muted">Join discussions and meet like-minded individuals in our forums.</p>
-            </div>
-          </div>
-
-          {/* Comments Section */}
-          <div className="mt-5" data-aos="fade-up">
-            <h3 className="fw-bold mb-3" >Community Comments</h3>
-            <p className="text-muted mb-4">See what others are saying about their experiences in Southern Leyte.</p>
-
-            {/* Comments List */}
-            <div className="comments-container text-start mx-auto" style={{ maxWidth: "700px" }}>
-              <div className="p-3 mb-3 rounded shadow-sm bg-light">
-                <strong>Taro Sakamoto</strong>
-                <p className="text-muted m-0">"I had an amazing time at Limasawa Island! Highly recommended."</p>
-              </div>
-              <div className="p-3 mb-3 rounded shadow-sm bg-light">
-                <strong>Yoichi Nagumo</strong>
-                <p className="text-muted m-0">"The virtual tour helped me plan my trip. Love it!"</p>
-              </div>
-              <div className="p-3 mb-3 rounded shadow-sm bg-light">
-                <strong>Rion Akao</strong>
-                <p className="text-muted m-0">"Great initiative! Hope to see more destinations soon."</p>
-              </div>
-            </div>
-
-            {/* Add Comment Form */}
-            <div className="mt-4 text-start mx-auto" style={{ maxWidth: "700px" }}>
-              <h4 className="fw-semibold mb-2">Leave a Comment</h4>
-              <textarea className="form-control rounded-3 p-3 border-light shadow-sm" rows="3" placeholder="Share your thoughts..."></textarea>
-              <button className="btn mt-3 px-4 rounded-pill" style={{ backgroundColor: 'var(--secondary-color)', color: 'white' }}>Post Comment</button>
-            </div>
-          </div>
         </div>
       </section>
 

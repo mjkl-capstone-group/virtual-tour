@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import PannellumViewer from "@/components/pannellumViewer";
-import assetsURL from "@/utils/supabaseAssets";
+import assetsURL from "@/utils/supabase-assets";
 
 export const metadata = {
     title: "Tangkaan Beach VR",
