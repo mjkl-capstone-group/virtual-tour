@@ -66,6 +66,7 @@ export default function Login() {
                         src="/assets/images/sign.png"
                         alt="Signup Image"
                         fill={true}
+                        sizes="500px"
                         style={{
                             borderTopRightRadius: "30px",
                             borderBottomRightRadius: "30px",

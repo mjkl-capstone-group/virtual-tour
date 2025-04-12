@@ -13,8 +13,6 @@ const destinations = {
         {
             name: "Crescent Beach Resort",
             type: "Beach",
-
-            
             location: "Liloan",
             description: "A hidden gem with a crescent-shaped shoreline, soft white sand, and crystal-clear waters. Perfect for swimming, relaxation, and sunset views.",
             image: `${assetsURL.images}/beach/crescent_beach.jpg`,

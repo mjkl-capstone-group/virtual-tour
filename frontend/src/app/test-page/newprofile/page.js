@@ -1,14 +1,13 @@
 "use client";
 
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import supabase from '@/lib/supabase-client'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
-export default function NewProfile() {
+export default function Profile() {
     const [user, setUser] = useState(null)
     const [profile, setProfile] = useState(null)
-    const [posts, setPosts] = useState([])
     const router = useRouter()
 
     useEffect(() => {
@@ -23,28 +22,16 @@ export default function NewProfile() {
             const currentUser = sessionData.session.user
             setUser(currentUser)
 
-            const { data: profileData, error: profileError } = await supabase
+            const { data: profileData, error } = await supabase
                 .from('visitors')
                 .select('first_name, last_name, user_name, email')
                 .eq('visitor_id', currentUser.id)
                 .single()
 
-            if (profileError) {
-                console.error('Error fetching profile:', profileError)
+            if (error) {
+                console.error('Error fetching profile:', error)
             } else {
                 setProfile(profileData)
-            }
-
-            const { data: userPosts, error: postsError } = await supabase
-                .from('forum_posts')
-                .select('*')
-                .eq('visitor_id', currentUser.id)
-                .order('created_at', { ascending: false })
-
-            if (postsError) {
-                console.error('Error fetching posts:', postsError)
-            } else {
-                setPosts(userPosts)
             }
         }
 
@@ -57,62 +44,56 @@ export default function NewProfile() {
     }
 
     return (
-            <div className='container'>
-                {profile ? (
-                    <div className="container mt-4">
-                        <div className="row g-2">
-                            <div className="col-md-3">
-                                <div className='border-end border-black'>
-                                    <div className="card-body">
-                                        <Image src="/assets/images/profile.png"
-                                            className="img-fluid rounded-circle mb-3"
-                                            alt="Profile Picture"
-                                            width={300}
-                                            height={300} />
-                                        <h5 className="card-title mb-0 fw-bold">{profile.first_name} {profile.last_name}</h5>
-                                        <p className="text-muted mb-1">@{profile.user_name}</p>
-                                        <div>
-                                            <i className="bi bi-envelope mx-1"></i>
-                                            Email:
-                                            <p className="mb-3">{profile.email}</p>
-                                        </div>
-                                        <button
-                                            onClick={handleLogout}
-                                            className="btn btn-outline-danger btn-sm"
-                                        >
-                                            Logout
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+        <div className="container mt-5">
+            {profile ? (
+                <div className="card mx-auto shadow" style={{ maxWidth: '700px' }}>
+                    {/* Banner Section */}
+                    <div className="bg-dark position-relative" style={{ height: '160px' }}>
+                        {/* Profile Picture */}
+                        <div className="position-absolute top-100 start-50 translate-middle" style={{ width: '120px' }}>
+                            <Image
+                                src="/assets/images/profile.png"
+                                alt="Profile"
+                                width={120}
+                                height={120}
+                                className="rounded-circle border border-3 border-white"
+                            />
+                        </div>
+                    </div>
 
-                            <div className="col-md-9">
-                                {posts.length > 0 ? (
-                                    posts.map(post => (
-                                        <div className="card mb-3" key={post.forum_id}>
-                                            <div className="card-body">
-                                                <h5 className="card-title">{post.title}</h5>
-                                                <p className="text-muted small mb-1">{post.category}</p>
-                                                <p className="card-text">{post.content}</p>
-                                                {post.image_url && (
-                                                    <img src={post.image_url} className="img-fluid rounded" alt={post.title} />
-                                                )}
-                                            </div>
-                                        </div>
-                                    ))
-                                ) : (
-                                    <p>No posts found.</p>
-                                )}
+                    {/* User Info */}
+                    <div className="card-body mt-5 text-center">
+                        <h4 className="fw-bold text-black">{profile.first_name} {profile.last_name}</h4>
+                        <p className="text-muted mb-1">@{profile.user_name}</p>
+                        <p className="mb-3">{profile.email}</p>
+                        <button
+                            onClick={handleLogout}
+                            className="btn btn-outline-danger btn-sm mb-4"
+                        >
+                            Logout
+                        </button>
+
+                        {/* Uploads */}
+                        <div className="text-start mt-3">
+                            <div className="d-flex justify-content-between align-items-center mb-2">
+                                <span className="fw-bold">Uploads</span>
+                                <button className="btn btn-sm btn-outline-secondary">⋮</button>
+                            </div>
+                            <div className="bg-light rounded p-4 text-muted" style={{ height: '160px' }}>
+                                No uploads yet
                             </div>
                         </div>
                     </div>
-                ) : (
-                    <div className='text-center m-5'>
-                        <div className='spinner-border text-dark' role="status">
-                        </div>
-                        <p className='mt-2'>Loading user data...</p>
+                </div>
+            ) : (
+                <div className="text-center mt-5">
+                    <div className="spinner-border text-primary" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
-                )}
-            </div>
-    )
+                    <p className="mt-2">Loading user data...</p>
+                </div>
+            )}
+        </div>
+    );
+
 }

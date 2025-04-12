@@ -38,7 +38,7 @@ const Header = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-md sticky-top py-2 bg-dark">
+        <nav className="navbar navbar-expand-md py-2 bg-dark">
             <div className="container">
                 <Link className="navbar-brand fw-bold"
                     href="/"
@@ -114,11 +114,11 @@ const Header = () => {
                         {isLoggedIn ? (
                             <li className="nav-item dropdown">
                                 <a className="nav-link d-flex align-items-center" id="userDropdown" role="button" data-bs-toggle="dropdown" style={{ cursor: 'pointer' }}>
-                                    <Image src="/assets/images/profile.png" width={35} height={35} className="rounded-circle user-profile" alt="User Profile" />
+                                    <Image src="/assets/images/profile.jpg" width={35} height={35} className="rounded-circle user-profile" alt="User Profile" />
                                 </a>
                                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                     <li>
-                                        <Link className="dropdown-item" href="/test-page/newprofile" style={{ cursor: 'pointer' }}>
+                                        <Link className="dropdown-item" href="/profile" style={{ cursor: 'pointer' }}>
                                             <i className="fa-solid fa-user me-2"></i> Profile
                                         </Link>
                                     </li>

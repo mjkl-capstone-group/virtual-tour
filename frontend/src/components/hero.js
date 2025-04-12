@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Image from 'next/image';
+import assetsURL from '@/utils/supabase-assets';
 
 const slides = [
     {
@@ -10,7 +12,8 @@ const slides = [
         caption: "Embark on a journey through breathtaking landscapes and rich history."
     },
     {
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+        // image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+        image: `${assetsURL.images}/beach/bitoon.jpg`,
         title: "Adventure Awaits",
         caption: "From scenic spots to thrilling experiences, explore the best of Southern Leyte."
     },
@@ -42,7 +45,14 @@ function ControlledCarousel() {
             >
                 {slides.map((slide, idx) => (
                     <Carousel.Item key={idx}>
-                        <img className="carousel-image" src={slide.image} alt={slide.title} />
+                        <Image
+                            className="carousel-image"
+                            src={slide.image}
+                            alt={slide.title}
+                            width={800}
+                            height={600}
+                            priority
+                        />
                         <div className="image-overlay"></div>
                         <Carousel.Caption className="mb-3">
                             <h3 className='fw-bold'>{slide.title}</h3>
