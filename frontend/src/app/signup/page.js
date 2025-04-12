@@ -44,7 +44,7 @@ export default function Register() {
         const user = data.user
         if (user) {
             const { error: profileError } = await supabase
-                .from('profiles')
+                .from('visitors')
                 .insert([{
                     visitor_id: user.id,
                     email,
@@ -57,6 +57,7 @@ export default function Register() {
             if (profileError) {
                 console.error('Error inserting profile:', profileError)
             } else {
+                await supabase.auth.signOut();
                 alert('Successfully registered account')
                 router.push('/signin')
             }

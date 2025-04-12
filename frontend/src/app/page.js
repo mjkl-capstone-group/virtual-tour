@@ -219,7 +219,7 @@ export default function Home() {
                     alt="Explore Southern Leyte"
                     fill={true}
                     sizes="500px"
-                    style={{ objectFit: "cover"}}
+                    style={{ objectFit: "cover" }}
                   />
                 </div>
               </div>

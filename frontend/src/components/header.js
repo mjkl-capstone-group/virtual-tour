@@ -118,7 +118,7 @@ const Header = () => {
                                 </a>
                                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                     <li>
-                                        <Link className="dropdown-item" href="/profile" style={{ cursor: 'pointer' }}>
+                                        <Link className="dropdown-item" href="/test-page/newprofile" style={{ cursor: 'pointer' }}>
                                             <i className="fa-solid fa-user me-2"></i> Profile
                                         </Link>
                                     </li>

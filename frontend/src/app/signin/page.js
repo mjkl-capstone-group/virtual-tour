@@ -74,7 +74,7 @@ export default function Login() {
                     />
 
                     <div className="position-absolute bottom-0 start-50 translate-middle-x mb-5" style={{ zIndex: 1 }}>
-                        <h2 className="text-white text-center fw-bold">Welcome Back</h2>
+                        <h2 className="text-white text-center fw-bold">Welcome!</h2>
                     </div>
                 </div>
 

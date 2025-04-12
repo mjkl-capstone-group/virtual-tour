@@ -23,7 +23,7 @@ export default function Profile() {
             setUser(currentUser)
 
             const { data: profileData, error } = await supabase
-                .from('profiles')
+                .from('visitors')
                 .select('first_name, last_name, user_name, email')
                 .eq('visitor_id', currentUser.id)
                 .single()
@@ -63,7 +63,6 @@ export default function Profile() {
                                     <h3 className="fw-bold text-black">{profile.first_name} {profile.last_name}</h3>
                                     <p className="text-muted mb-1">@{profile.user_name}</p>
                                     <p className="mb-3">{profile.email}</p>
-
                                     <button
                                         onClick={handleLogout}
                                         className="btn btn-outline-danger btn-sm"
