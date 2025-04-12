@@ -118,7 +118,7 @@ export default function ProfileWithPosts() {
                             {selectedTab === 'posts' && (
                                 <div>
                                     {posts.length > 0 ? (
-                                        <div className="bg-light rounded p-3" style={{ maxHeight: '300px', overflowY: 'auto' }}>
+                                        <div className="bg-light rounded p-3">
                                             {posts.map(post => (
                                                 <div key={post.forum_id} className="card mb-4 shadow-sm border-0">
                                                     <div className="card-body">

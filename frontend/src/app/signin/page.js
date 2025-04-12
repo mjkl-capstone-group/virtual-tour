@@ -111,7 +111,7 @@ export default function Login() {
                             </div>
 
                             <div className="d-flex justify-content-center mt-4">
-                                <button type="submit" className="btn btn-primary w-50">Log In</button>
+                                <button type="submit" className="btn btn-primary w-50">Sign In</button>
                             </div>
                         </form>
 

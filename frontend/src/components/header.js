@@ -38,7 +38,7 @@ const Header = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-md py-2 bg-dark">
+        <nav className="navbar navbar-expand-md py-2 bg-dark sticky-top">
             <div className="container">
                 <Link className="navbar-brand fw-bold"
                     href="/"
