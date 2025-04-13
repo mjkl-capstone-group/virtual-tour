@@ -170,65 +170,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-5 bg-light" id="about">
-        <div className="container py-5">
-          <h2 className={`${styles["section-title"]} text-center mb-5`} data-aos="fade-up">
-            <strong> Why Choose Us </strong>
-          </h2>
-          <div className="row g-4 text-center mt-1 d-flex flex-wrap justify-content-center">
-            <div className="col-4 col-sm-4 col-md-4" data-aos="fade-up-right" data-aos-delay="100">
-              <i className={`fas fa-map-marked-alt mb-3 bg p-3 rounded-4 ${styles["feature-icon"]}`}></i>
-              <h4>Local Expertise</h4>
-              <p>Guided by Southern Leyte natives with deep cultural knowledge</p>
-            </div>
-
-            <div className="col-4 col-sm-4 col-md-4" data-aos="fade-up" data-aos-delay="200">
-              <i className={`fas fa-panorama mb-3 bg p-3 rounded-4 ${styles["feature-icon"]}`}></i>
-              <h4>360° Experience</h4>
-              <p>Immersive virtual tours of our province's best spots</p>
-            </div>
-
-            <div className="col-4 col-sm-4 col-md-4" data-aos="fade-up-left" data-aos-delay="300">
-              <i className={`fas fa-fish mb-3 bg p-3 rounded-4 ${styles["feature-icon"]}`}></i>
-              <h4>Marine Conservation</h4>
-              <p>Supporting local conservation efforts</p>
-            </div>
-          </div>
-
-          <div className="row justify-content-center mt-5" data-aos="fade-up">
-            <div className="col-12 col-sm-12 col-md-12 col-lg-12">
-              <div className="card shadow-sm border-0 rounded-3 d-flex flex-row"
-                style={{ backgroundColor: 'var(--primary-color)' }}
-              >
-                <div className="card-body d-flex flex-column justify-content-center p-5">
-                  <h1 className="card-title text-white fw-bold mb-4">Explore Southern Leyte</h1>
-                  <p className="card-text text-white mb-4">
-                    Discover hidden gems and immerse yourself in the rich culture and nature of Southern Leyte. Join our virtual tour and explore!
-                  </p>
-                  <div className="d-grid col-6 mt-3">
-                    <Link href="/test-page/slider" className="btn btn-light">
-                      Discover
-                    </Link>
-                  </div>
-                </div>
-                <div className="w-50 position-relative">
-                  <Image src="/assets/photos/choose.jpg"
-                    className="card-img-top mh-100"
-                    alt="Explore Southern Leyte"
-                    fill={true}
-                    sizes="500px"
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
       <FixedButton />
 
       <div data-aos="fade-up" data-aos-delay='10'>

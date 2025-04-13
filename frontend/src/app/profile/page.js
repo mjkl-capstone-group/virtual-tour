@@ -12,6 +12,7 @@ export default function ProfileWithPosts() {
     const [posts, setPosts] = useState([]);
     const router = useRouter();
     const [selectedTab, setSelectedTab] = useState('posts');
+    const [likes, setLikes] = useState([]);
 
     useEffect(() => {
         const getUserData = async () => {
@@ -51,11 +52,17 @@ export default function ProfileWithPosts() {
         };
 
         getUserData();
+        fetchLikes();
     }, []);
 
     const handleLogout = async () => {
         await supabase.auth.signOut();
         router.push('/');
+    };
+
+    const fetchLikes = async () => {
+        const { data, error } = await supabase.from('forum_likes').select('*');
+        if (!error) setLikes(data);
     };
 
     return (
@@ -142,7 +149,8 @@ export default function ProfileWithPosts() {
                                                         <p>{post.content}</p>
                                                         <div className="d-flex gap-4 mt-3 text-muted">
                                                             <button className="btn">
-                                                                <i className="fa-regular fa-heart me-1"></i> Likes
+                                                                <i className="fa-regular fa-heart me-1"></i>
+                                                                {likes.filter(like => like.forum_id === post.forum_id).length} Likes
                                                             </button>
                                                             <button className="btn">
                                                                 <i className="fas fa-comment-alt me-1"></i> Comments
