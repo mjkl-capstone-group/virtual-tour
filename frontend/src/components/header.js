@@ -96,13 +96,13 @@ const Header = () => {
 
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item mt-1">
-                            <Link className="nav-link" href="/test-page/slider" title="Discover">
+                            <Link className="nav-link" href="" title="Discover">
                                 <i className="fa-regular fa-compass fa-lg"></i>
                             </Link>
                         </li>
 
                         <li className="nav-item mt-1">
-                            <Link className="nav-link" href="/test-page/modal" title="Help/FAQ">
+                            <Link className="nav-link" href="" title="Help/FAQ">
                                 <i className="fa-regular fa-question-circle fa-lg"></i>
                             </Link>
                         </li>

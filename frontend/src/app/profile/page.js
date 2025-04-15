@@ -132,7 +132,7 @@ export default function ProfileWithPosts() {
                                                     <div className="card-body">
                                                         <div className="d-flex align-items-center mb-2">
                                                             <Image
-                                                                src="/assets/images/profile.jpg"
+                                                                src={`${assetsURL.authentication}profile.jpg`}
                                                                 alt="Profile"
                                                                 width={40}
                                                                 height={40}
