@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import assetsURL from '@/utils/supabase-assets';
 
 export const metadata = {
     title: "404 - Page Not Found",
@@ -12,7 +13,7 @@ export default function NotFound() {
             <h1 className="display-1 fw-bold mb-0">404</h1>
             <Image
                 className='mt-0'
-                src="/assets/photos/giphy.gif"
+                src={`${assetsURL.others}giphy.gif`}
                 alt="404 error GIF"
                 unoptimized
                 width={150}

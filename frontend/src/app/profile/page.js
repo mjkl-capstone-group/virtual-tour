@@ -5,6 +5,7 @@ import supabase from '@/lib/supabase-client';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import assetsURL from '@/utils/supabase-assets';
 
 export default function ProfileWithPosts() {
     const [user, setUser] = useState(null);
@@ -97,7 +98,7 @@ export default function ProfileWithPosts() {
                         </div>
                         <div className="position-absolute top-100 start-50 translate-middle" style={{ width: '120px' }}>
                             <Image
-                                src="/assets/images/profile.jpg"
+                                src={`${assetsURL.authentication}profile.jpg`}
                                 alt="Profile"
                                 width={120}
                                 height={120}

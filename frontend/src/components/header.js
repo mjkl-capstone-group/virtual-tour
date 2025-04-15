@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import supabase from '@/lib/supabase-client'
 import { useRouter } from "next/navigation";
-
-// import assetsURL from "@/utils/supabase-assets";
+import assetsURL from "@/utils/supabase-assets";
 
 const Header = () => {
     const router = useRouter()
@@ -46,11 +45,12 @@ const Header = () => {
                 >
                     <div className="flex items-center">
                         <Image
-                            src="/assets/logos/leytexplore.jpg"
+                            src={`${assetsURL.logos}leytexplore.jpg`}
                             className="mb-1"
                             width={30}
                             height={30}
                             alt="Leyte Explore"
+                            priority
                         />
                         <span className="ms-2 text-black">PERIPLOS</span>
                     </div>
@@ -114,7 +114,7 @@ const Header = () => {
                         {isLoggedIn ? (
                             <li className="nav-item dropdown">
                                 <a className="nav-link d-flex align-items-center" id="userDropdown" role="button" data-bs-toggle="dropdown" style={{ cursor: 'pointer' }}>
-                                    <Image src="/assets/images/profile.jpg" width={35} height={35} className="rounded-circle user-profile" alt="User Profile" />
+                                    <Image src={`${assetsURL.authentication}profile.jpg`} width={35} height={35} className="rounded-circle user-profile" alt="User Profile" />
                                 </a>
                                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                     <li>

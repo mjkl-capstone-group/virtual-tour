@@ -4,6 +4,9 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Team from "./ourteam";
 import styles from "./ourteam.module.css";
+import Link from "next/link";
+import Image from "next/image";
+import assetsURL from "@/utils/supabase-assets";
 
 export const metadata = {
     title: "About Us | PERIPLOS",
@@ -131,13 +134,13 @@ export default function AboutUs() {
                                             Discover hidden gems and immerse yourself in the rich culture and nature of Southern Leyte. Join our virtual tour and explore!
                                         </p>
                                         <div className="d-grid col-6 mt-3">
-                                            <Link href="/test-page/slider" className="btn btn-light">
+                                            <Link href="" className="btn btn-light">
                                                 Discover
                                             </Link>
                                         </div>
                                     </div>
                                     <div className="w-50 position-relative">
-                                        <Image src="/assets/photos/choose.jpg"
+                                        <Image src={`${assetsURL.others}choose.jpg`}
                                             className="card-img-top mh-100"
                                             alt="Explore Southern Leyte"
                                             fill={true}

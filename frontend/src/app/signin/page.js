@@ -5,6 +5,7 @@ import { createClient } from "@supabase/supabase-js";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import assetsURL from "@/utils/supabase-assets";
 
 const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -52,7 +53,7 @@ export default function Login() {
                     <div className="position-absolute" style={{ zIndex: 1, top: "30px", left: "30px" }}>
                         <Link href="/" className='text-decoration-none'>
                             <Image
-                                src="/assets/logos/leytexplore.jpg"
+                                src={`${assetsURL.logos}leytexplore.jpg`}
                                 width={40}
                                 height={40}
                                 alt="Leyte Explore"
@@ -63,7 +64,7 @@ export default function Login() {
                     </div>
 
                     <Image
-                        src="/assets/images/sign.png"
+                        src={`${assetsURL.authentication}sign.png`}
                         alt="Signup Image"
                         fill={true}
                         sizes="500px"
@@ -72,6 +73,7 @@ export default function Login() {
                             borderBottomRightRadius: "30px",
                         }}
                         className="object-fit-cover"
+                        priority
                     />
 
                     <div className="position-absolute bottom-0 start-50 translate-middle-x mb-5" style={{ zIndex: 1 }}>

@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
+import assetsURL from '@/utils/supabase-assets';
 
 export default function ForumPage() {
     const [posts, setPosts] = useState([]);
@@ -354,7 +355,7 @@ export default function ForumPage() {
 
                                 <div className="d-flex align-items-center mb-2">
                                     <Image
-                                        src="/assets/images/profile.jpg"
+                                        src={`${assetsURL.authentication}profile.jpg`}
                                         alt="Profile"
                                         width={40}
                                         height={40}

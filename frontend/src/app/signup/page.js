@@ -5,6 +5,7 @@ import supabase from '@/lib/supabase-client'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image';
 import Link from 'next/link';
+import assetsURL from '@/utils/supabase-assets';
 
 export default function Register() {
     const [formData, setFormData] = useState({
@@ -71,7 +72,7 @@ export default function Register() {
                     <div className="position-absolute" style={{ zIndex: 1, top: "30px", left: "30px" }}>
                         <Link href="/" className='text-decoration-none'>
                             <Image
-                                src="/assets/logos/leytexplore.jpg"
+                                src={`${assetsURL.logos}leytexplore.jpg`}
                                 width={40}
                                 height={40}
                                 alt="Leyte Explore"
@@ -82,7 +83,7 @@ export default function Register() {
                     </div>
 
                     <Image
-                        src="/assets/images/sign.png"
+                        src={`${assetsURL.authentication}sign.png`}
                         alt="Signup Image"
                         fill={true}
                         style={{

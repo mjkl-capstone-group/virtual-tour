@@ -11,6 +11,7 @@ import Footer from "@/components/footer";
 import Hero from "@/components/hero"
 import Link from "next/link";
 import FixedButton from "@/components/ui/nereofinBtn";
+import assetsURL from "@/utils/supabase-assets";
 
 export default function Home() {
   useEffect(() => {
@@ -90,7 +91,7 @@ export default function Home() {
             </div>
             <div className="col-md-6 d-flex align-items-center" data-aos="fade-up-left" data-aos-delay="50">
               <Image
-                src="/assets/photos/virtualtour.gif"
+                src={`${assetsURL.others}virtualtour.gif`}
                 alt="Virtual Tour Tutorial"
                 className="img-fluid w-100 h-75 my-auto object-fit-contain"
                 width={500}
@@ -112,7 +113,7 @@ export default function Home() {
                   className={`card p-4 shadow-lg border-0 rounded-3 text-center flex-fill mt-3 ${styles.cardHover}`}
                   style={{
                     height: "300px",
-                    backgroundImage: "url('/assets/photos/tangkaan-card.jpg')",
+                    backgroundImage: `url(${assetsURL.others}tangkaan-card.jpg)`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     width: "50vh",
@@ -127,7 +128,7 @@ export default function Home() {
                   className={`card p-4 shadow-lg border-0 rounded-3 text-center flex-fill ${styles.cardHover}`}
                   style={{
                     height: "350px",
-                    backgroundImage: "url('/assets/photos/agas-card.jpg')",
+                    backgroundImage: `url(${assetsURL.others}agas-card.jpg)`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     width: "50vh",
@@ -142,7 +143,7 @@ export default function Home() {
                   className={`card p-4 shadow-lg border-0 rounded-3 text-center flex-fill mt-3 ${styles.cardHover}`}
                   style={{
                     height: "300px",
-                    backgroundImage: "url('/assets/photos/limasawa-card.jpg')",
+                    backgroundImage: `url(${assetsURL.others}limasawa-card.jpg)`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     width: "50vh",
